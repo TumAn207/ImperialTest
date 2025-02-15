@@ -1,0 +1,160 @@
+- type: species
+  id: QAIAndroidPerson
+  name: species-name-QAIAndroid
+  roundStart: true
+  prototype: QAIAndroidTest
+  sprites: MobQAIAndroidSprites
+  defaultSkinTone: "#b8b8b8"
+  markingLimits: MobQAIAndroidMarkingLimits
+  dollPrototype: QAIAndroidTest
+  skinColoration: Hues
+
+- type: speciesBaseSprites
+  id: MobQAIAndroidSprites
+  sprites:
+    Head: MobQAIAndroidHead
+    Hair: MobQAIAndroidMarkingFollowSkin
+    FacialHair: MobQAIAndroidMarkingFollowSkin
+    Chest: MobQAIAndroidTorso
+    HeadTop: MobHumanoidAnyMarking # Corvax Sponsors
+    Tail: MobHumanoidAnyMarking # Corvax Sponsors
+    Eyes: MobQAIAndroidEyes
+    LArm: MobQAIAndroidLArm
+    RArm: MobQAIAndroidRArm
+    LHand: MobQAIAndroidLHand
+    RHand: MobQAIAndroidRHand
+    LLeg: MobQAIAndroidLLeg
+    RLeg: MobQAIAndroidRLeg
+    LFoot: MobQAIAndroidLFoot
+    RFoot: MobQAIAndroidRFoot
+
+- type: markingPoints
+  id: MobQAIAndroidMarkingLimits
+  points:
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Tail: # :despair:
+      points: 1 # Corvax Sponsors
+      required: false
+    HeadTop: # :skull:
+      points: 1 # Corvax Sponsors
+      required: false
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 4
+      required: false
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidEyes
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: eyes
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidMarkingFollowSkin
+  markingsMatchSkin: false
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidHead
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIhead_m
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidHeadMale
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIhead_m
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidHeadFemale
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIhead_f
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidTorso
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAItorso_m
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidTorsoMale
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAItorso_m
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidTorsoFemale
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAItorso_f
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidLLeg
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIl_leg
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidLArm
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIl_arm
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidLHand
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIl_hand
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidLFoot
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIl_foot
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidRLeg
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIr_leg
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidRArm
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIr_arm
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidRHand
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIr_hand
+
+- type: humanoidBaseSprite
+  id: MobQAIAndroidRFoot
+  markingsMatchSkin: false
+  baseSprite:
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: QAIr_foot

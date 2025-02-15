@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by discord:TumAn207/Lapkee для Времени Приключений",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "full",
+            "directions": 4
+        },
+        {
+            "name": "QAIr_leg",
+            "directions": 4
+        },
+        {
+            "name": "QAIl_leg",
+            "directions": 4
+        },
+        {
+            "name": "QAIl_hand",
+            "directions": 4
+        },
+        {
+            "name": "QAIr_hand",
+            "directions": 4
+        },
+        {
+            "name": "QAIhead_f",
+            "directions": 4
+        },
+        {
+            "name": "QAIhead_m",
+            "directions": 4
+        },
+        {
+            "name": "QAIl_arm",
+            "directions": 4
+        },
+        {
+            "name": "QAIr_arm",
+            "directions": 4
+        },
+        {
+            "name": "QAIl_foot",
+            "directions": 4
+        },
+        {
+            "name": "QAIr_foot",
+            "directions": 4
+        },
+        {
+            "name": "QAItorso_f",
+            "directions": 4
+        },
+        {
+            "name": "QAItorso_m",
+            "directions": 4
+        }
+
+    ]
+}

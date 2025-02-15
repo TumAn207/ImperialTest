@@ -1,0 +1,45 @@
+- type: body
+  id: QAIAndroid
+  name: QAIAndroid
+  root: torso
+  slots:
+    head:
+      part: HeadQAIAndroid
+      connections:
+      - torso
+      organs:
+        brain: OrganQAIAndroidBrainNymph
+    torso:
+      part: TorsoQAIAndroid
+      connections:
+      - right arm
+      - left arm
+      - right leg
+      - left leg
+      organs:
+        stomach: OrganQAIAndroidStomachNymph
+        lungs: OrganQAIAndroidLungsNymph
+    right arm:
+      part: RightArmQAIAndroid
+      connections:
+      - right hand
+    left arm:
+      part: LeftArmQAIAndroid
+      connections:
+      - left hand
+    right hand:
+      part: RightHandQAIAndroid
+    left hand:
+      part: LeftHandQAIAndroid
+    right leg:
+      part: RightLegQAIAndroid
+      connections:
+      - right foot
+    left leg:
+      part: LeftLegQAIAndroid
+      connections:
+      - left foot
+    right foot:
+      part: RightFootQAIAndroid
+    left foot:
+      part: LeftFootQAIAndroid

@@ -1,0 +1,153 @@
+- type: entity
+  name: QAIAndroidTest
+  suffix: TumAn207
+  parent: BaseMobSpecies
+  id: QAIAndroidTest
+  description: "Test"
+  components:
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: full
+        Critical:
+          Base: full
+        Dead:
+          Base: full
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        130: Critical
+        170: Dead
+      stateAlertDict:
+        Alive: BorgHealth
+        Critical: BorgCrit
+        Dead: BorgDead
+      showOverlays: false
+      allowRevives: true
+    - type: HealthExaminable
+      examinableTypes:
+        - Blunt
+        - Slash
+        - Piercing
+        - Heat
+        - Shock
+      locPrefix: silicon
+    - type: Tag
+      tags:
+      - DoorBumpOpener
+      - FootstepSound
+    - type: Puller
+      needsHands: false
+    - type: MeleeWeapon
+      hidden: true
+      angle: 0
+      animation: WeaponArcClaw
+      soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      damage:
+        types:
+          Piercing: 5.5
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 3
+      baseSprintSpeed: 4
+    - type: NoSlip
+      interactSuccessSpawn: EffectHearts
+    - type: Inventory
+      templateId: human
+    - type: Hands
+    - type: Temperature
+      heatDamageThreshold: 325
+      coldDamageThreshold: 260
+      currentTemperature: 310.15
+      specificHeat: 42
+      coldDamage:
+        types:
+          Cold: 0 #per second, scales with temperature & other constants
+      heatDamage:
+        types:
+          Heat: 0 #per second, scales with temperature & other constants
+    - type: ThermalRegulator
+      metabolismHeat: 800
+      radiatedHeat: 100
+      implicitHeatRegulation: 500
+      sweatHeatRegulation: 2000
+      shiveringHeatRegulation: 2000
+      normalBodyTemperature: 310.15
+      thermalRegulationTemperatureThreshold: 25
+    - type: NpcFactionMember
+      factions:
+      - NanoTrasen
+    - type: ZombieImmune
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+      - Common #Добавить шеснацетеричку.
+    - type: ActiveRadio
+      channels:
+      - Binary
+      - Common
+    - type: Repairable
+      doAfterDelay: 10
+      allowSelfRepair: true
+    - type: WiresPanel
+    - type: ActivatableUIRequiresPanel
+    - type: ContainerContainer
+      containers:
+        cell_slot: !type:ContainerSlot { }
+        borg_module: !type:Container { }
+    - type: PowerCellSlot
+      cellSlotId: cell_slot
+      fitsInCharger: true
+    - type: PowerCellDraw
+      drawRate: 0.6
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellMedium
+    - type: TypingIndicator
+      proto: robot
+    - type: Speech
+      speechVerb: Robotic
+      speechSounds: Borg
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSilicon
+    - type: UnblockableSpeech
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepBorg
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: CyborgControl
+      transmitFrequencyId: RoboticsConsole
+      savableAddress: false
+    - type: OnUseTimerTrigger
+      delay: 10
+      examinable: false
+      beepSound:
+        path: /Audio/Effects/Cargo/buzz_two.ogg
+        params:
+          volume: -4
+    - type: InteractionPopup
+      interactSuccessString: petting-success-generic-cyborg
+      interactFailureString: petting-failure-generic-cyborg
+    - type: RandomMetadata
+      nameSegments:
+        - names_QAIAndroid
+    - type: Access
+      enabled: false
+      groups:
+      - AllAccess
+    - type: AccessReader
+      access: [["Command"], ["Research"]]
+    - type: ShowJobIcons
+    - type: ProtectedFromStepTriggers
+
+- type: entity
+  parent: QAIAndroidTest
+  id: MobQAIAndroidPersonDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: QAIAndroidPerson

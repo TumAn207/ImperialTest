@@ -1,0 +1,39 @@
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: Medical corps.
+  name: Медицинский Корпус
+  suffix: QAI
+  description: Облегчённый корпус с встроенными сервоприводами для ускорения передвижения носящего его андройда, используется медицинской модификацией, в связи с чем покрашен в белые оттенки для быстрого опознания.
+  components:
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,2,2
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/clothing/Medical.rsi
+  - type: Clothing
+    sprite: Imperial/QAIAndroid/clothing/Medical.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.40
+        Slash: 0.40
+        Piercing: 0.60
+        Heat: 0.85
+        Cold: 0.85
+        Shock: 0.75
+        Caustic: 0.85
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
