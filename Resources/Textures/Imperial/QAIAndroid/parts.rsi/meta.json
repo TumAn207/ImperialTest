@@ -31,6 +31,10 @@
       "directions": 4
     },
     {
+      "name": "manipulator4",
+      "directions": 4
+    },
+    {
       "name": "QAIl_foot",
       "directions": 4
     },
