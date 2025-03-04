@@ -1,0 +1,1572 @@
+- type: entity
+  parent: BasePDA
+  id: QAISecurityPDA
+  abstract: true
+  components:
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NewsReaderCartridge
+    - WantedListCartridge
+
+- type: entity
+  parent: BasePDA
+  id: QAIMedicalPDA
+  abstract: true
+  components:
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NewsReaderCartridge
+      - MedTekCartridge
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-adjutant
+  name: pda-adjutant
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-adjutant
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-adjutant
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-adjutant
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-atmos
+  name: pda-atmos
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-atmos
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-atmos
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-atmos
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-bartender
+  name: pda-bartender
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-bartender
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-bartender
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-bartender
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-boxer
+  name: pda-boxer
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-boxer
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-boxer
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-boxer
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-brigmedic
+  name: pda-brigmedic
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-brigmedic
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-brigmedic
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-brigmedic
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-captain
+  name: pda-captain
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-captain
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-captain
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-captain
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-cargo
+  name: pda-cargo
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cargo
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-cargo
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-cargo
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-ce
+  name: pda-ce
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-ce
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-ce
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-ce
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-centcom
+  name: pda-centcom
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-centcom
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-centcom
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-centcom
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-chaplain
+  name: pda-chaplain
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-chaplain
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-chaplain
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-chaplain
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-chemistry
+  name: pda-chemistry
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-chemistry
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-chemistry
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-chemistry
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-cmo
+  name: pda-cmo
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cmo
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-cmo
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-cmo
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-cook
+  name: pda-cook
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-cook
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-cook
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-cook
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-coroner
+  name: pda-coroner
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-coroner
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-coroner
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-coroner
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-detective
+  name: pda-detective
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-detective
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-detective
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-detective
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-engineer
+  name: pda-engineer
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-engineer
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-engineer
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-engineer
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-hop
+  name: pda-hop
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-hop
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-hop
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-hop
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-hos
+  name: pda-hos
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-hos
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-hos
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-hos
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-hydro
+  name: pda-hydro
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-hydro
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-hydro
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-hydro
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-interncadet
+  name: pda-interncadet
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-interncadet
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-interncadet
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-interncadet
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-internmed
+  name: pda-internmed
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-internmed
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-internmed
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-internmed
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-internsci
+  name: pda-internsci
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-internsci
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-internsci
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-internsci
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-internservice
+  name: pda-internservice
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-internservice
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-internservice
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-internservice
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-interntech
+  name: pda-interntech
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-interntech
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-interntech
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-interntech
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-janitor
+  name: pda-janitor
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-janitor
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-janitor
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-janitor
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-lawyer
+  name: pda-lawyer
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-lawyer
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-lawyer
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-lawyer
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-library
+  name: pda-library
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-library
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-library
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-library
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-medical
+  name: pda-medical
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-medical
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-medical
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-medical
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-miner
+  name: pda-miner
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-miner
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-miner
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-miner
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-musician
+  name: pda-musician
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-musician
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-musician
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-musician
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-paramedic
+  name: pda-paramedic
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-paramedic
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-paramedic
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-paramedic
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-psychologist
+  name: pda-psychologist
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-psychologist
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-psychologist
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-psychologist
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-qm
+  name: pda-qm
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-qm
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-qm
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-qm
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-reporter
+  name: pda-reporter
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-reporter
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-reporter
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-reporter
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-roboticist
+  name: pda-roboticist
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-roboticist
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-roboticist
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-roboticist
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-science
+  name: pda-science
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-science
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-science
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-science
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-security
+  name: pda-security
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-security
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-security
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-security
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-seniorengineer
+  name: pda-seniorengineer
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorengineer
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-seniorengineer
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-seniorengineer
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAISecurityPDA
+  id: QAIpda-seniorofficer
+  name: pda-seniorofficer
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorofficer
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-seniorofficer
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-seniorofficer
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-seniorphysician
+  name: pda-seniorphysician
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorphysician
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-seniorphysician
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-seniorphysician
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-seniorresearcher
+  name: pda-seniorresearcher
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-seniorresearcher
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-seniorresearcher
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-seniorresearcher
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: QAIMedicalPDA
+  id: QAIpda-virology
+  name: pda-virology
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-virology
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-virology
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-virology
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"
+
+- type: entity
+  parent: BasePDA
+  id: QAIpda-warden
+  name: pda-warden
+  suffix: QAI
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-warden
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Item
+    size: Small
+  - type: Pda
+    id: SonaIDCard
+    state: pda-warden
+  - type: Icon
+    sprite: Imperial/QAIAndroid/PDA.rsi
+    state: pda-warden
+  - type: PdaBorderColor
+    borderColor: "#f2f2f2"
+    accentHColor: "#00f1f5"
+    accentVColor: "#00f1f5"

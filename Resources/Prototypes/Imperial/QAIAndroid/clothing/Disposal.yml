@@ -1,0 +1,38 @@
+- type: entity
+  parent: ClothingOuterBaseMedium
+  id: Disposal-Armor
+  name: Корпус Утилизаторов
+  suffix: QAI
+  components:
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,2,2
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,4,3
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+  - type: Clothing
+    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.45
+        Piercing: 0.3
+        Heat: 0.15
+        Shock: 0.3
+        Caustic: 0.85
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1

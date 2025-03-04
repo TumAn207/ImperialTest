@@ -1,0 +1,33 @@
+- type: reagent
+  id: PhaseFluid
+  name: reagent-name-saline
+  group: Medicine
+  desc: reagent-desc-saline
+  physicalDesc: reagent-physical-desc-salty
+  flavor: salty
+  color: "#fff2d6"
+  metabolisms:
+    Drink:
+      effects:
+        - !type:SatiateThirst
+          factor: 6
+        - !type:ModifyBloodLevel
+          amount: 6
+
+- type: reagent
+  id: CoolingPhaseFluid
+  name: reagent-name-CoolingPhaseFluid
+  parent: BaseDrink
+  desc: reagent-desc-CoolingPhaseFluid
+  slippery: true
+  physicalDesc: reagent-physical-desc-translucent
+  flavor: CoolingPhaseFluid
+  color: "#fff2d6"
+  recognizable: true
+  boilingPoint: 100.0
+  meltingPoint: 0.0
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 1

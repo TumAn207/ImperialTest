@@ -1,5 +1,5 @@
 - type: species
-  id: QAIAndroidPerson
+  id: QAIAndroid
   name: species-name-QAIAndroid
   roundStart: true
   prototype: QAIAndroidTest
@@ -16,8 +16,8 @@
     Hair: MobQAIAndroidMarkingFollowSkin
     FacialHair: MobQAIAndroidMarkingFollowSkin
     Chest: MobQAIAndroidTorso
-    HeadTop: MobHumanoidAnyMarking # Corvax Sponsors
-    Tail: MobHumanoidAnyMarking # Corvax Sponsors
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
     Eyes: MobQAIAndroidEyes
     LArm: MobQAIAndroidLArm
     RArm: MobQAIAndroidRArm
@@ -32,19 +32,19 @@
   id: MobQAIAndroidMarkingLimits
   points:
     Hair:
-      points: 1
+      points: 0
       required: false
     FacialHair:
-      points: 1
+      points: 0
       required: false
-    Tail: # :despair:
-      points: 1 # Corvax Sponsors
+    Tail:
+      points: 2
       required: false
-    HeadTop: # :skull:
-      points: 1 # Corvax Sponsors
+    HeadTop:
+      points: 2
       required: false
     Legs:
-      points: 2
+      points: 4
       required: false
     Arms:
       points: 4

@@ -1,0 +1,630 @@
+- type: marking
+  id: QAIAndroidBreastSpikes
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/other.rsi
+    state: chest-points
+
+- type: marking
+  id: QAIAndroidSpineSpikes
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/other.rsi
+    state: spine-spikes
+
+- type: marking
+  id: QAIAndroidTailSpikes
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/other.rsi
+    state: tail-spikes
+
+- type: marking
+  id: QAIAndroidmetallicabelly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicabelly ########################
+
+- type: marking
+  id: QAIAndroidmetallicachest #
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicachest
+
+- type: marking
+  id: QAIAndroidmetallicaleft-foot #$#
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaleft-foot
+
+- type: marking
+  id: QAIAndroidmetallicaleft-hand #
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaleft-hand
+
+- type: marking
+  id: QAIAndroidmetallicaleft-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaleft-shoulder
+
+- type: marking
+  id: QAIAndroidmetallicaleft-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaleft-thigh
+
+- type: marking
+  id: QAIAndroidmetallicamanipulator #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicamanipulator
+
+- type: marking
+  id: QAIAndroidmetallicaright-foot #
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaright-foot
+
+- type: marking
+  id: QAIAndroidmetallicaright-hand #
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaright-hand
+
+- type: marking
+  id: QAIAndroidmetallicaright-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaright-shoulder
+
+- type: marking
+  id: QAIAndroidmetallicaright-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaright-thigh
+
+- type: marking
+  id: QAIAndroidmetallicaspine #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicaspine
+
+- type: marking
+  id: QAIAndroidmetallicatail #
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/metallica.rsi
+    state: metallicatail
+
+- type: marking
+  id: QAIAndroidsalvagebelly #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvagebelly
+
+- type: marking
+  id: QAIAndroidsalvagechest #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvagechest
+
+- type: marking
+  id: QAIAndroidsalvagehead #
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvagehead
+
+- type: marking
+  id: QAIAndroidsalvageleft-foot #
+  bodyPart: LFoot
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageleft-foot
+
+- type: marking
+  id: QAIAndroidsalvageleft-hand #
+  bodyPart: LHand
+  markingCategory: LHand
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageleft-hand
+
+- type: marking
+  id: QAIAndroidsalvageleft-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageleft-shoulder
+
+- type: marking
+  id: QAIAndroidsalvageleft-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageleft-thigh
+
+- type: marking
+  id: QAIAndroidsalvageright-foot #
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageright-foot
+
+- type: marking
+  id: QAIAndroidsalvageright-hand #
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageright-hand
+
+- type: marking
+  id: QAIAndroidsalvageright-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageright-shoulder
+
+- type: marking
+  id: QAIAndroidsalvageright-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvageright-thigh
+
+- type: marking
+  id: QAIAndroidsalvagetail #
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/salvage.rsi
+    state: salvagetail
+
+- type: marking
+  id: QAIAndroidsovietbelly #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietbelly
+
+- type: marking
+  id: QAIAndroidsovietchest #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietchest
+
+- type: marking
+  id: QAIAndroidsovietleft-foot #
+  bodyPart: LFoot
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietleft-foot
+
+- type: marking
+  id: QAIAndroidsovietleft-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietleft-shoulder
+
+- type: marking
+  id: QAIAndroidsovietleft-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietleft-thigh
+
+- type: marking
+  id: QAIAndroidsovietright-foot #
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietright-foot
+
+- type: marking
+  id: QAIAndroidsovietright-shoulder #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietright-shoulder
+
+- type: marking
+  id: QAIAndroidsovietright-thigh #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietright-thigh
+
+- type: marking
+  id: QAIAndroidsovietspine #
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/soviet.rsi
+    state: sovietspine
+
+- type: marking
+  id: QAIAndroidleg-claws #
+  bodyPart: LLeg
+  markingCategory: Legs
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: leg-claws
+
+- type: marking
+  id: QAIAndroidone-line-chest #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-chest
+
+- type: marking
+  id: QAIAndroidone-line-hand-left #
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-hand-left
+
+- type: marking
+  id: QAIAndroidone-line-hand-right #
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-hand-right
+
+- type: marking
+  id: QAIAndroidone-line-shoulder-left #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-shoulder-left
+
+- type: marking
+  id: QAIAndroidone-line-shoulder-right #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-shoulder-right
+
+- type: marking
+  id: QAIAndroidone-line-thigh-left #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-thigh-left
+
+- type: marking
+  id: QAIAndroidone-line-thigh-right #
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [QAIAndroid]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#FFFFFF"
+  sprites:
+  - sprite: Imperial/QAIAndroid/Customization/line.rsi
+    state: one-line-thigh-right
+

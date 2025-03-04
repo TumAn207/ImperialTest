@@ -11,6 +11,9 @@
       "name": "full"
     },
     {
+      "name": "light"
+    },
+    {
       "name": "eyes",
       "directions": 4
     },

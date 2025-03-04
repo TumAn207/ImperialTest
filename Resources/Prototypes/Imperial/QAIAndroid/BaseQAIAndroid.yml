@@ -1,7 +1,7 @@
 - type: entity
   name: QAIAndroidTest
   suffix: TumAn207
-  parent: BaseMobSpecies
+  parent: BaseQAIAndroid
   id: QAIAndroidTest
   description: "Test"
   components:
@@ -48,8 +48,8 @@
         types:
           Piercing: 5.5
     - type: MovementSpeedModifier
-      baseWalkSpeed: 3
-      baseSprintSpeed: 4
+      baseWalkSpeed: 2.3
+      baseSprintSpeed: 4.3
     - type: NoSlip
       interactSuccessSpawn: EffectHearts
     - type: Inventory
@@ -91,7 +91,7 @@
       allowSelfRepair: true
     - type: WiresPanel
     - type: ActivatableUIRequiresPanel
-    - type: BorgChassis
+    - type: BorgChassis #Заменить на BasisQAIAndroid
     - type: LockingWhitelist
       blacklist:
         components:
@@ -186,7 +186,7 @@
       radius: 3.8
       netsync: false
     - type: DamageVisuals
-      thresholds: [ 10, 20, 30, 50, 70, 100 ]
+      thresholds: [ 70, 100 ]
       targetLayers:
       - "enum.HumanoidVisualLayers.Chest"
       - "enum.HumanoidVisualLayers.Head"
@@ -197,15 +197,26 @@
       damageOverlayGroups:
         Brute:
           sprite: Mobs/Effects/brute_damage.rsi #Заменить
-          color: "#00cccc"
+          color: "#fff2d6"
         Burn:
           sprite: Mobs/Effects/burn_damage.rsi #Заменить
     - type: SlowOnDamage
       speedModifierThresholds:
         60: 0.85
         80: 0.45
-    - type: AndroidThirdHand
-      handSpriteState: "manipulator4"
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: QAIAndroid
+    - type: Bloodstream
+      bloodReagent: CoolingPhaseFluid
+      bloodlossDamage:
+        types:
+          Burn:
+            0.2
+      bloodlossHealDamage:
+        types:
+          Bloodloss:
+            -0.01
 
 - type: entity
   parent: QAIAndroidTest
@@ -213,4 +224,4 @@
   noSpawn: true
   components:
     - type: HumanoidAppearance
-      species: QAIAndroidPerson
+      species: QAIAndroid

@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "salvagebelly",
+        "directions": 4
+      },
+      {
+        "name": "salvagechest",
+        "directions": 4
+      },
+      {
+        "name": "salvagehead",
+        "directions": 4
+      },
+      {
+        "name": "salvageleft-foot",
+        "directions": 4
+      },
+      {
+        "name": "salvageleft-hand",
+        "directions": 4
+      },
+      {
+        "name": "salvageleft-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "salvageleft-thigh",
+        "directions": 4
+      },
+      {
+        "name": "salvageright-foot",
+        "directions": 4
+      },
+      {
+        "name": "salvageright-hand",
+        "directions": 4
+      },
+      {
+        "name": "salvageright-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "salvageright-thigh",
+        "directions": 4
+      },
+      {
+        "name": "salvagetail",
+        "directions": 4
+      }
+    ]
+  }

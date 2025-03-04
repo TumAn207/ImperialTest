@@ -1,0 +1,657 @@
+- type: entity
+  parent: Clothing
+  id: QAIIDCardStandard
+  name: identification card
+  description: A card necessary to access various areas aboard the station.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: Imperial/QAIAndroid/id_cards.rsi
+  - type: Item
+    size: Small
+    heldPrefix: default
+    storedRotation: -90
+  - type: Access
+  - type: IdCard
+  - type: StationRecordKeyStorage
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - WhitelistChameleon
+    - WhitelistChameleonIdCard
+  - type: StealTarget
+    stealGroup: IDCard
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidatmospherictechnician
+  name: AtmosphericTechnician ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconAtmosphericTechnician
+  - type: PresetIdCard
+    job: AtmosphericTechnician
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idatmospherictechnician
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidbotanist
+  name: botanist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconbotanist
+  - type: PresetIdCard
+    job: botanist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idbotanist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidboxer
+  name: boxer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconboxer
+  - type: PresetIdCard
+    job: boxer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idboxer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidbrigmedic
+  name: brigmedic ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconbrigmedic
+  - type: PresetIdCard
+    job: brigmedic
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idbrigmedic
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcaptain
+  name: captain ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcaptain
+  - type: PresetIdCard
+    job: captain
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idcaptain
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcargotechnician
+  name: cargotechnician ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcargotechnician
+  - type: PresetIdCard
+    job: cargotechnician
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcargotechnician
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcentcom
+  name: centcom ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcentcom
+  - type: PresetIdCard
+    job: centcom
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idcentcom
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidchaplain
+  name: chaplain ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconchaplain
+  - type: PresetIdCard
+    job: chaplain
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idchaplain
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidchemist
+  name: chemist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconchemist
+  - type: PresetIdCard
+    job: chemist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idchemist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidchiefengineer
+  name: chiefengineer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconchiefengineer
+  - type: PresetIdCard
+    job: chiefengineer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idchiefengineer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidchiefmedicalofficer
+  name: chiefmedicalofficer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconchiefmedicalofficer
+  - type: PresetIdCard
+    job: chiefmedicalofficer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idchiefmedicalofficer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcook
+  name: cook ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcook
+  - type: PresetIdCard
+    job: cook
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcook
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcoroner
+  name: coroner ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcoroner
+  - type: PresetIdCard
+    job: coroner
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcoroner
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidcurator
+  name: curator ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconcurator
+  - type: PresetIdCard
+    job: curator
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcurator
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIiddetective
+  name: detective ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIcondetective
+  - type: PresetIdCard
+    job: detective
+  - type: Sprite
+    layers:
+    - state: default
+    - state: iddetective
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidgeneticist
+  name: geneticist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIcongeneticist
+  - type: PresetIdCard
+    job: geneticist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idgeneticist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidbartender
+  name: bartender ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconbartender
+  - type: PresetIdCard
+    job: bartender
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idbartender
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidheadofpersonnel
+  name: headofpersonnel ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconheadofpersonnel
+  - type: PresetIdCard
+    job: headofpersonnel
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idheadofpersonnel
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidheadofsecurity
+  name: headofsecurity ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconheadofsecurity
+  - type: PresetIdCard
+    job: headofsecurity
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idheadofsecurity
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidiaa
+  name: iaa ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconiaa
+  - type: PresetIdCard
+    job: iaa
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idiaa
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidintern-cadet
+  name: intern-cadet ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconintern-cadet
+  - type: PresetIdCard
+    job: intern-cadet
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idintern-cadet
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidintern-med
+  name: intern-med ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconintern-med
+  - type: PresetIdCard
+    job: intern-med
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idintern-med
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidintern-sci
+  name: intern-sci ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconintern-sci
+  - type: PresetIdCard
+    job: intern-sci
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idintern-sci
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidintern-service
+  name: intern-service ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconintern-service
+  - type: PresetIdCard
+    job: intern-service
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idintern-service
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidintern-tech
+  name: intern-tech ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconintern-tech
+  - type: PresetIdCard
+    job: intern-tech
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idintern-tech
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidjanitor
+  name: idjanitor ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconidjanitor
+  - type: PresetIdCard
+    job: idjanitor
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idjanitor
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidlawyer
+  name: lawyer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconlawyer
+  - type: PresetIdCard
+    job: lawyer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idlawyer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidmedicaldoctor
+  name: medicaldoctor ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconmedicaldoctor
+  - type: PresetIdCard
+    job: medicaldoctor
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idmedicaldoctor
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidmusician
+  name: musician ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconmusician
+  - type: PresetIdCard
+    job: musician
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idmusician
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidparamedic
+  name: paramedic ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconparamedic
+  - type: PresetIdCard
+    job: paramedic
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idparamedic
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidpassenger
+  name: passenger ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconpassenger
+  - type: PresetIdCard
+    job: passenger
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idpassenger
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidpsychologist
+  name: psychologist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconpsychologist
+  - type: PresetIdCard
+    job: psychologist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idpsychologist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidquartermaster
+  name: quartermaster ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconquartermaster
+  - type: PresetIdCard
+    job: quartermaster
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idquartermaster
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidreporter
+  name: reporter ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconreporter
+  - type: PresetIdCard
+    job: reporter
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idreporter
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidresearchdirector
+  name: researchdirector ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconresearchdirector
+  - type: PresetIdCard
+    job: researchdirector
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idresearchdirector
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidroboticist
+  name: roboticist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconroboticist
+  - type: PresetIdCard
+    job: roboticist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idroboticist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidscientist
+  name: scientist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconscientist
+  - type: PresetIdCard
+    job: scientist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idscientist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidsecurityofficer
+  name: securityofficer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconsecurityofficer
+  - type: PresetIdCard
+    job: securityofficer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idsecurityofficer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidseniorengineer
+  name: seniorengineer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconseniorengineer
+  - type: PresetIdCard
+    job: seniorengineer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idseniorengineer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidseniorofficer
+  name: seniorofficer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconseniorofficer
+  - type: PresetIdCard
+    job: seniorofficer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idseniorofficer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidseniorphysician
+  name: seniorphysician ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconseniorphysician
+  - type: PresetIdCard
+    job: seniorphysician
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idseniorphysician
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidseniorresearcher
+  name: seniorresearcher ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconseniorresearcher
+  - type: PresetIdCard
+    job: seniorresearcher
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idseniorresearcher
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidstationengineer
+  name: stationengineer ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconstationengineer
+  - type: PresetIdCard
+    job: stationengineer
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idstationengineer
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidvirologist
+  name: virologist ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconvirologist
+  - type: PresetIdCard
+    job: virologist
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idvirologist
+
+- type: entity
+  parent: QAIIDCardStandard
+  id: QAIidwarden
+  name: warden ID card
+  components:
+  - type: IdCard
+    jobIcon: JobIconwarden
+  - type: PresetIdCard
+    job: warden
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idwarden

@@ -12,6 +12,9 @@
             "directions": 4
         },
         {
+            "name": "Light"
+        },
+        {
             "name": "QAIr_leg",
             "directions": 4
         },

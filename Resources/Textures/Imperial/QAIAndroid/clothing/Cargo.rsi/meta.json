@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "",
+    "copyright": "Discord TumAn207/Lapkee Designed for Imperial Space 2.0!.",
     "size": {
       "x": 32,
       "y": 32
@@ -21,6 +21,9 @@
       {
         "name": "inhand-right",
         "directions": 4
+      },
+      {
+        "name": "Light"
       }
     ]
   }
