@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Universal corps.
+  id: Standart-corps
   name: Универсальный Корпус
   suffix: QAI
   description:  Стандартный корпус для андройда. Разработан жестким и тяжёлым, для предотвращения использования не-специализированной моделью андройда особых способностей своего тела с целью предотвращения возможных травм при взаимодействии с персоналом (и персонала)
@@ -22,9 +22,9 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Standart.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Standart.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Standart.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Standart.rsi
   - type: Armor
     modifiers:
       coefficients:

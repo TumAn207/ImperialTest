@@ -1,0 +1,55 @@
+- type: technology
+  id: ShellQAIAndroidArsenal
+  name: research-technology-Security-shell
+  icon:
+    sprite: Imperial/Other/Modsuits/Clothing/Head/salvage.rsi #Заменить.
+    state: icon
+  discipline: Arsenal #Охранная.
+  tier: 2
+  cost: 5000
+  recipeUnlocks:
+  - Security-Corps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidExperimental
+  name: research-technology-Working-shell
+  icon:
+    sprite: Imperial/Other/Modsuits/Clothing/Head/salvage.rsi #Заменить.
+    state: icon
+  discipline: Experimental #РНД.
+  tier: 2
+  cost: 4500
+  recipeUnlocks:
+  - Cargo-Armor
+  - Engineering-corps
+  - Scientific-corps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidCivilianServices
+  name: research-technology-Medical-shell
+  icon:
+    sprite: Imperial/Other/Modsuits/Clothing/Head/salvage.rsi #Заменить.
+    state: icon
+  discipline: CivilianServices #Сервис.
+  tier: 2
+  cost: 4200
+  recipeUnlocks:
+  - Medical-corps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidbasisShell
+  name: research-technology-basis-shell
+  icon:
+    sprite: Imperial/Other/Modsuits/Clothing/Head/salvage.rsi #Заменить.
+    state: icon
+  discipline: Industrial
+  tier: 1
+  cost: 3200
+  recipeUnlocks:
+  - Standart-corps

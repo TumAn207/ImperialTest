@@ -22,9 +22,9 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Cargo.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Cargo.rsi
   - type: Armor
     modifiers:
       coefficients:

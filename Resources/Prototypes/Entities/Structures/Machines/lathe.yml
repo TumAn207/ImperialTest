@@ -316,6 +316,7 @@
     - BorgModules
     - MechParts
     - MechEquipment
+    - QAIAndroidCorps # Imperial Space
   - type: MaterialStorage
     whitelist:
       tags:
@@ -403,6 +404,7 @@
     - SecurityWeapons
     - ImperialSecurityDynamic # Imperial Space
     - SecurityDisablers
+    - QAIAndroidSecurityCorps # Imperial Space
   - type: MaterialStorage
     whitelist:
       tags:

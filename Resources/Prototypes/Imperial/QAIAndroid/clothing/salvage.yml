@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Disposal-Armor
+  id: Salvage-Armor
   name: Корпус Утилизаторов
   suffix: QAI
   components:
@@ -21,9 +21,9 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi #Заменить.
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi
+    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi #Заменить.
   - type: Armor
     modifiers:
       coefficients:

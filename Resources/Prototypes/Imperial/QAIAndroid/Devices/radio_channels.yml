@@ -1,0 +1,6 @@
+- type: radioChannel
+  id: East-1
+  name: chat-radio-East-1
+  keycode: 'а'
+  frequency: 4813
+  color: "#f6ce64"

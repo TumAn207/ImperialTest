@@ -1,0 +1,13 @@
+- type: entity
+  parent: [ EncryptionKey, BaseQAIAndroidContraband ]
+  id: EncryptionKeyQAI
+  name: Encryption key QAI #В переводе должно быть Ключ шифрования Исток-1
+  description: the encryption key that all Androids have QAI
+  components:
+  - type: EncryptionKey
+    channels:
+    - East-1
+    defaultChannel: East-1
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/EncryptionKey.rsi
+    state: key

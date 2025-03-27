@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Engineering corps.
+  id: Engineering-corps
   name: Инженерный Корпус
   suffix: QAI
   description: Технический корпус предназначенный для обслуживания станционных установок благодаря повышенной защите от огня, что позволяет андройду не гореть даже в открытом пламени.
@@ -22,9 +22,9 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Engineer.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Engineer.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Engineer.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Engineer.rsi
   - type: Armor
     modifiers:
       coefficients:

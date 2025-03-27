@@ -89,14 +89,8 @@
     - type: Repairable
       doAfterDelay: 10
       allowSelfRepair: true
-    - type: WiresPanel
     - type: ActivatableUIRequiresPanel
-    - type: BorgChassis #Заменить на BasisQAIAndroid
-    - type: LockingWhitelist
-      blacklist:
-        components:
-        - BorgChassis
-        - RoboticsConsole
+    - type: BorgChassis #Заменить на QAIAndroidChassisComponent.
     - type: ContainerContainer
       containers:
         borg_brain: !type:ContainerSlot { }
@@ -106,10 +100,6 @@
     - type: PowerCellSlot
       cellSlotId: cell_slot
       fitsInCharger: true
-    - type: ItemToggle
-      onActivate: false
-      activated: false
-      onUse: false
     - type: ItemTogglePointLight
     - type: AccessToggle
     - type: PowerCellDraw
@@ -185,21 +175,6 @@
       autoRot: true
       radius: 3.8
       netsync: false
-    - type: DamageVisuals
-      thresholds: [ 70, 100 ]
-      targetLayers:
-      - "enum.HumanoidVisualLayers.Chest"
-      - "enum.HumanoidVisualLayers.Head"
-      - "enum.HumanoidVisualLayers.LArm"
-      - "enum.HumanoidVisualLayers.LLeg"
-      - "enum.HumanoidVisualLayers.RArm"
-      - "enum.HumanoidVisualLayers.RLeg"
-      damageOverlayGroups:
-        Brute:
-          sprite: Mobs/Effects/brute_damage.rsi #Заменить
-          color: "#fff2d6"
-        Burn:
-          sprite: Mobs/Effects/burn_damage.rsi #Заменить
     - type: SlowOnDamage
       speedModifierThresholds:
         60: 0.85
@@ -217,6 +192,19 @@
         types:
           Bloodloss:
             -0.01
+    - type: BatteryDrinker
+    #- type: SiliconEmitSoundOnDrained
+      #sound: "Audio/Effects/fsharpaw.ogg"
+      #interval: 15
+      #playChance: 1
+      #popUp: silicon-power-low #Добавить перевод.
+    - type: LockedWiresPanel
+    - type: WiresPanel
+    - type: ItemToggle
+      onActivate: false
+      activated: false
+      onUse: false
+
 
 - type: entity
   parent: QAIAndroidTest

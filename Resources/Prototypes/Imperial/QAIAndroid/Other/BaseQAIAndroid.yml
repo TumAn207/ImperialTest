@@ -6,11 +6,3 @@
   - BaseMobSpecies
   id: BaseQAIAndroid
   abstract: true
-  components:
-  - type: SolutionContainerManager
-  - type: InjectableSolution
-    solution: chemicals
-  - type: Bloodstream
-    bloodlossDamage:
-      types:
-        Burn: 0.2 # Получает урон от ожогов при потере крови

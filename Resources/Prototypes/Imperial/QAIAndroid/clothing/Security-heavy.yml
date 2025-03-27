@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Security-heavy Armor
+  id: Security-heavy-Armor
   name: Укреплённый корпус Службы Безопасности
   suffix: QAI
   description: Капитальная переработка корпуса андройда сб, имеет почти максимальное для действующего шасси бронирование, массу внутренних активных частей и мощный экзоскелет под дополнительными листами брони.
@@ -22,9 +22,9 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Security-heavy.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Security-heavy.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Security-heavy.rsi
+    sprite: Imperial/QAIAndroid/clothing/Shell/Security-heavy.rsi
   - type: Armor
     modifiers:
       coefficients:
