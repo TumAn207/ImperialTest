@@ -2,12 +2,16 @@
   id: QAIAndroid
   name: species-name-QAIAndroid
   roundStart: true
-  prototype: QAIAndroidTest
+  prototype: QAIAndroid
   sprites: MobQAIAndroidSprites
   defaultSkinTone: "#b8b8b8"
   markingLimits: MobQAIAndroidMarkingLimits
-  dollPrototype: QAIAndroidTest
+  dollPrototype: QAIAndroid
   skinColoration: Hues
+  maleFirstNames: NamesQAIAndroidFirst
+  femaleFirstNames: NamesQAIAndroidFirst
+  lastNames: NamesQAIAndroidLast
+  naming: FirstDashFirst
 
 - type: speciesBaseSprites
   id: MobQAIAndroidSprites

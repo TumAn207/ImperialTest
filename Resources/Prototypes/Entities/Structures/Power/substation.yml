@@ -112,6 +112,8 @@
     guides:
     - VoltageNetworks
     - Power
+  - type: BatteryDrinkerSource
+    maxAmount: 65 # Imperial Space
 
 # Compact Wall Substation Base
 - type: entity

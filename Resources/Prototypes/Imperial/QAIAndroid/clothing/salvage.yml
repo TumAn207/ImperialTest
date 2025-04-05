@@ -1,8 +1,9 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Salvage-Armor
+  id: SalvageCorps
   name: Корпус Утилизаторов
   suffix: QAI
+  description: Образец утилизационной оболочки КИИ. Призван увеличить общую эффективность конкретной модели посредством подключения к последней экзоскелета и защитной оболочки
   components:
   - type: Item
     size: Huge
@@ -21,18 +22,18 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi #Заменить.
+    sprite: Imperial/QAIAndroid/clothing/Salvage.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Cargo.rsi #Заменить.
+    sprite: Imperial/QAIAndroid/clothing/Salvage.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.45
-        Slash: 0.45
-        Piercing: 0.3
-        Heat: 0.15
-        Shock: 0.3
-        Caustic: 0.85
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.8
+        Heat: 0.75
+        Stamina: 0.75
+        Explosion : 0.4
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 1
+    walkModifier: 0.95
+    sprintModifier: 0.95

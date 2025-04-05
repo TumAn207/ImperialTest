@@ -1,13 +1,14 @@
 - type: latheRecipePack
   id: QAIAndroidCorps
   recipes:
-  - Cargo-Armor
-  - Standart-corps
-  - Engineering-corps
-  - Medical-corps
-  - Scientific-corps
+  - SalvageCorps
+  - AtmosphericTechnicianCorps
+  - StandartCorps
+  - EngineeringCorps
+  - MedicalCorps
+  - ScientificCorps
 
 - type: latheRecipePack
   id: QAIAndroidSecurityCorps
   recipes:
-  - Security-Corps
+  - SecurityCorps

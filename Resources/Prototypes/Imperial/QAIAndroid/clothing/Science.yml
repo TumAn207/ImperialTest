@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Scientific-corps
+  id: ScientificCorps
   name: Научный Корпус
   suffix: QAI
   description: Укреплённый корпус, предполагавшийся ранее для использования в войнах, сейчас - упрощённый, но продолжающий иметь превосходную защиту от всего, что может представлять угрозу в научном отделе.
@@ -22,18 +22,18 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Shell/Science.rsi
+    sprite: Imperial/QAIAndroid/clothing/Science.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Shell/Science.rsi
+    sprite: Imperial/QAIAndroid/clothing/Science.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.25
-        Slash: 0.25
-        Piercing: 0.1
-        Heat: 0.25
-        Shock: 0.3
-        Caustic: 0.85
+        Blunt: 0.7
+        Slash: 0.8
+        Piercing: 0.9
+        Heat: 0.65
+        Stamina : 0.85
+        Explosion : 0.4
   - type: ClothingSpeedModifier
-    walkModifier: 1
-    sprintModifier: 0.95
+    walkModifier: 0.85
+    sprintModifier: 0.85

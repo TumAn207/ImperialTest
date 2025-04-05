@@ -1,14 +1,14 @@
 - type: latheRecipe
-  id: Cargo-Armor
-  result: Cargo-Armor
+  id: SalvageCorps
+  result: SalvageCorps
   completetime: 25
   materials:
     Steel: 2000
     Plasteel: 1500
 
 - type: latheRecipe
-  id: Engineering-corps
-  result: Engineering-corps
+  id: EngineeringCorps
+  result: EngineeringCorps
   completetime: 25
   materials:
     Steel: 1800
@@ -16,8 +16,17 @@
     Glass: 300
 
 - type: latheRecipe
-  id: Medical-corps
-  result: Medical-corps
+  id: AtmosphericTechnicianCorps
+  result: AtmosphericTechnicianCorps
+  completetime: 25
+  materials:
+    Steel: 2000
+    Plasteel: 700
+    Glass: 300
+
+- type: latheRecipe
+  id: MedicalCorps
+  result: MedicalCorps
   completetime: 25
   materials:
     Steel: 1800
@@ -25,8 +34,8 @@
     Glass: 500
 
 - type: latheRecipe
-  id: Scientific-corps
-  result: Scientific-corps
+  id: ScientificCorps
+  result: ScientificCorps
   completetime: 25
   materials:
     Steel: 2000
@@ -35,8 +44,8 @@
     Plasma: 300
 
 - type: latheRecipe
-  id: Security-Corps
-  result: Security-Corps
+  id: SecurityCorps
+  result: SecurityCorps
   completetime: 25
   materials:
     Steel: 1500
@@ -44,8 +53,8 @@
     Glass: 800
 
 - type: latheRecipe
-  id: Standart-corps
-  result: Standart-corps
+  id: StandartCorps
+  result: StandartCorps
   completetime: 25
   materials:
     Steel: 1800

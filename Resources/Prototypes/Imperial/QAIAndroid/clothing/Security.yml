@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingOuterBaseMedium
-  id: Security-Corps
+  id: SecurityCorps
   name: Корпус Службы Безопасности
   suffix: QAI
   description: бронированный корпус андройда службы безопасности, в котором не только отсутствуют ограничители особых деталей андройда, но и имеется сносная броня для несения службы по охране правопорядка.
@@ -22,18 +22,18 @@
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
   - type: Sprite
-    sprite: Imperial/QAIAndroid/clothing/Shell/Security.rsi
+    sprite: Imperial/QAIAndroid/clothing/Security.rsi
   - type: Clothing
-    sprite: Imperial/QAIAndroid/clothing/Shell/Security.rsi
+    sprite: Imperial/QAIAndroid/clothing/Security.rsi
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.35
-        Slash: 0.35
-        Piercing: 0.55
-        Heat: 0.45
-        Shock: 0.3
-        Caustic: 0.85
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.5
+        Heat: 0.7
+        Stamina: 0.7
+        Explosion: 0.4
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9

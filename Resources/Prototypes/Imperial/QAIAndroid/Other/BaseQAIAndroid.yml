@@ -1,8 +1,21 @@
 - type: entity
   save: false
   parent:
-  - MobBloodstream
+  - QAIAndroidBloodstream
   - MobFlammable
   - BaseMobSpecies
   id: BaseQAIAndroid
   abstract: true
+
+- type: entity
+  save: false
+  id: QAIAndroidBloodstream
+  abstract: true
+  components:
+  - type: SolutionContainerManager
+  - type: InjectableSolution
+    solution: chemicals
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Burn: 0.5

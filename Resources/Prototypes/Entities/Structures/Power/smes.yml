@@ -97,6 +97,8 @@
       - PowerStorage
       - VoltageNetworks
       - Power
+    - type: BatteryDrinkerSource
+      maxAmount: 105 # Imperial Space
 
 # SMES' in use
 

@@ -1,9 +1,8 @@
 - type: entity
-  name: QAIAndroidTest
+  name: QAIAndroid
   suffix: TumAn207
   parent: BaseQAIAndroid
-  id: QAIAndroidTest
-  description: "Test"
+  id: QAIAndroid
   components:
     - type: DamageStateVisuals
       states:
@@ -90,7 +89,7 @@
       doAfterDelay: 10
       allowSelfRepair: true
     - type: ActivatableUIRequiresPanel
-    - type: BorgChassis #Заменить на QAIAndroidChassisComponent.
+    #- type: BorgChassis #Заменить на QAIAndroidChassisComponent.
     - type: ContainerContainer
       containers:
         borg_brain: !type:ContainerSlot { }
@@ -143,8 +142,6 @@
       enabled: false
       groups:
       - AllAccess
-    - type: AccessReader
-      access: [["Command"], ["Research"]]
     - type: ShowJobIcons
     - type: ProtectedFromStepTriggers
     - type: HandheldLight
@@ -204,10 +201,23 @@
       onActivate: false
       activated: false
       onUse: false
+    - type: DamageVisuals
+      thresholds: [ 10 ]
+      targetLayers:
+      - "enum.HumanoidVisualLayers.Chest"
+      - "enum.HumanoidVisualLayers.Head"
+      - "enum.HumanoidVisualLayers.LArm"
+      - "enum.HumanoidVisualLayers.LLeg"
+      - "enum.HumanoidVisualLayers.RArm"
+      - "enum.HumanoidVisualLayers.RLeg"
+      damageOverlayGroups:
+        Brute:
+          sprite: Mobs/Effects/brute_damage.rsi
+          color: "#00000000"
 
 
 - type: entity
-  parent: QAIAndroidTest
+  parent: QAIAndroid
   id: MobQAIAndroidPersonDummy
   noSpawn: true
   components:
