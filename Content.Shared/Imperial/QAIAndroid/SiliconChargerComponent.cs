@@ -2,7 +2,7 @@ using Content.Shared.Storage.Components;
 using Content.Shared.StepTrigger.Components;
 using Robust.Shared.Audio;
 
-namespace Content.Shared.SimpleStation14.Silicon;
+namespace Content.Shared.QAIAndroid.Silicon;
 
 [RegisterComponent]
 public sealed partial class SiliconChargerComponent : Component

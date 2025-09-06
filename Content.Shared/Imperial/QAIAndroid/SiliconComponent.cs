@@ -1,9 +1,9 @@
 using Robust.Shared.GameStates;
-using Content.Shared.SimpleStation14.Silicon.Systems;
+using Content.Shared.QAIAndroid.Silicon.Systems;
 using Robust.Shared.Serialization.TypeSerializers.Implementations;
 using Robust.Shared.Containers;
 
-namespace Content.Shared.SimpleStation14.Silicon.Components;
+namespace Content.Shared.QAIAndroid.Silicon.Components;
 
 [RegisterComponent, NetworkedComponent]
 public sealed partial class SiliconComponent : Component

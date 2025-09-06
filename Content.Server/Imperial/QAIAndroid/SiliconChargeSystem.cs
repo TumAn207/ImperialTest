@@ -1,5 +1,5 @@
 using Robust.Shared.Random;
-using Content.Shared.SimpleStation14.Silicon.Components;
+using Content.Shared.QAIAndroid.Silicon.Components;
 using Content.Server.Power.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Server.Temperature.Components;
@@ -7,18 +7,18 @@ using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Popups;
 using Content.Shared.Popups;
-using Content.Shared.SimpleStation14.Silicon.Systems;
+using Content.Shared.QAIAndroid.Silicon.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Server.Body.Components;
 using Content.Server.Power.EntitySystems;
 using Robust.Shared.Containers;
 using System.Diagnostics.CodeAnalysis;
 using Robust.Shared.Timing;
-using Content.Shared.SimpleStation14.CCVar;
+using Content.Shared.QAIAndroid.CCVar;
 using Robust.Shared.Configuration;
 using Robust.Shared.Utility;
 
-namespace Content.Server.SimpleStation14.Silicon.Charge;
+namespace Content.Server.QAIAndroid.Silicon.Charge;
 
 public sealed class SiliconChargeSystem : EntitySystem
 {

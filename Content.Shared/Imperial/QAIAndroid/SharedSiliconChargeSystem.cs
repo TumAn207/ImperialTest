@@ -1,9 +1,9 @@
-using Content.Shared.SimpleStation14.Silicon.Components;
+using Content.Shared.QAIAndroid.Silicon.Components;
 using Content.Shared.Alert;
 using Robust.Shared.Serialization;
 using Content.Shared.Movement.Systems;
 
-namespace Content.Shared.SimpleStation14.Silicon.Systems;
+namespace Content.Shared.QAIAndroid.Silicon.Systems;
 
 
 public sealed class SharedQAIAndroidChargeSystem : EntitySystem

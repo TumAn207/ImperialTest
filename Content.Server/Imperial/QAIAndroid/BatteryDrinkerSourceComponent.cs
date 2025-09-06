@@ -1,6 +1,6 @@
 using Robust.Shared.Audio;
 
-namespace Content.Server.SimpleStation14.Silicon.Charge;
+namespace Content.Server.QAIAndroid.Silicon.Charge;
 
 [RegisterComponent]
 public sealed partial class BatteryDrinkerSourceComponent : Component

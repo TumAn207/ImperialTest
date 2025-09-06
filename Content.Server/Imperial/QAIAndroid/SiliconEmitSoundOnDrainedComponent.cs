@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using Robust.Shared.Audio;
 using Content.Server.Sound.Components;
 
-namespace Content.Server.SimpleStation14.Silicon;
+namespace Content.Server.QAIAndroid.Silicon;
 
 /// <summary>
 ///     Applies a <see cref="SpamEmitSoundComponent"/> to a Silicon when its battery is drained, and removes it when it's not.

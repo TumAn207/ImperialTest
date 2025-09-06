@@ -3,13 +3,13 @@ using Content.Server.Power.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.DoAfter;
 using Content.Shared.PowerCell.Components;
-using Content.Shared.SimpleStation14.Silicon;
+using Content.Shared.QAIAndroid.Silicon;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
-using Content.Server.SimpleStation14.Silicon.Charge;
+using Content.Server.QAIAndroid.Silicon.Charge;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Popups;
-using Content.Server.SimpleStation14.Power;
+using Content.Server.QAIAndroid.Power;
 using Robust.Shared.Audio.Systems;
 
 namespace Content.Server.Imperial.Power;
