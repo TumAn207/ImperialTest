@@ -1,0 +1,219 @@
+- type: entity
+  name: QAIAndroid
+  suffix: TumAn207
+  parent: BaseQAIAndroid
+  id: QAIAndroid
+  components:
+    - type: DamageStateVisuals
+      states:
+        Alive:
+          Base: full
+        Critical:
+          Base: full
+        Dead:
+          Base: full
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        130: Critical
+        170: Dead
+      stateAlertDict:
+        Alive: BorgHealth
+        Critical: BorgCrit
+        Dead: BorgDead
+      showOverlays: false
+      allowRevives: true
+    - type: HealthExaminable
+      examinableTypes:
+        - Blunt
+        - Slash
+        - Piercing
+        - Heat
+        - Shock
+      locPrefix: silicon
+    - type: Tag
+      tags:
+      - DoorBumpOpener
+      - FootstepSound
+    - type: Puller
+      needsHands: false
+    - type: MeleeWeapon
+      hidden: true
+      angle: 0
+      animation: WeaponArcClaw
+      soundHit:
+        path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
+      damage:
+        types:
+          Piercing: 5.5
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2.3
+      baseSprintSpeed: 4.3
+    - type: NoSlip
+      interactSuccessSpawn: EffectHearts
+    - type: Inventory
+      templateId: human
+    - type: Hands
+    - type: Temperature
+      heatDamageThreshold: 325
+      coldDamageThreshold: 260
+      currentTemperature: 310.15
+      specificHeat: 42
+      coldDamage:
+        types:
+          Cold: 0
+      heatDamage:
+        types:
+          Heat: 0
+    - type: ThermalRegulator
+      metabolismHeat: 800
+      radiatedHeat: 100
+      implicitHeatRegulation: 500
+      sweatHeatRegulation: 2000
+      shiveringHeatRegulation: 2000
+      normalBodyTemperature: 310.15
+      thermalRegulationTemperatureThreshold: 2
+    - type: NpcFactionMember
+      factions:
+      - NanoTrasen
+    - type: ZombieImmune
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+      - Common #Добавить шеснацетеричку.
+    - type: ActiveRadio
+      channels:
+      - Binary
+      - Common
+    - type: Repairable
+      doAfterDelay: 10
+      allowSelfRepair: true
+    - type: ActivatableUIRequiresPanel
+    - type: BorgChassis #Заменить на QAIAndroidChassisComponent.
+    - type: ContainerContainer
+      containers:
+        borg_brain: !type:ContainerSlot { }
+        cell_slot: !type:ContainerSlot { }
+        borg_module: !type:Container { }
+        part-container: !type:Container
+    - type: PowerCellSlot
+      cellSlotId: cell_slot
+      fitsInCharger: true
+    - type: AccessToggle
+    - type: PowerCellDraw
+      drawRate: 0.75
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellMedium
+    - type: TypingIndicator
+      proto: robot
+    - type: Speech
+      speechVerb: Robotic
+      speechSounds: Borg
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSilicon
+    - type: UnblockableSpeech
+    - type: FootstepModifier
+      footstepSoundCollection:
+        collection: FootstepBorg
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: CyborgControl
+      transmitFrequencyId: RoboticsConsole
+      savableAddress: false
+    - type: OnUseTimerTrigger
+      delay: 10
+      examinable: false
+      beepSound:
+        path: /Audio/Effects/Cargo/buzz_two.ogg
+        params:
+          volume: -4
+    - type: InteractionPopup
+      interactSuccessString: petting-success-generic-cyborg
+      interactFailureString: petting-failure-generic-cyborg
+    #- type: RandomMetadata
+      #nameSegments:
+        #- names_QAIAndroid
+    - type: Access
+      enabled: false
+      groups:
+      - AllAccess
+    - type: ShowJobIcons
+    - type: ProtectedFromStepTriggers
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        60: 0.85
+        80: 0.45
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: QAIAndroid
+    - type: LightBehaviour
+      behaviours:
+      - !type:FadeBehaviour
+        id: radiating
+        maxDuration: 2.0
+        startValue: 3.0
+        endValue: 2.0
+        isLooped: true
+        reverseWhenFinished: true
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Nearest
+        maxDuration: 1.0
+        minValue: 0.1
+        maxValue: 2.0
+        isLooped: true
+    - type: PointLight
+      enabled: false
+      mask: /Textures/Effects/LightMasks/cone.png
+      autoRot: true
+      radius: 5
+      netsync: false
+    - type: UnpoweredFlashlight
+    - type: Bloodstream
+      bloodReagent: CoolingPhaseFluid
+      bloodlossDamage:
+        types:
+          Burn:
+            0.2
+      bloodlossHealDamage:
+        types:
+          Bloodloss:
+            -0.01
+    - type: BatteryDrinker
+    #- type: SiliconEmitSoundOnDrained
+      #sound: "Audio/Effects/fsharpaw.ogg"
+      #interval: 15
+      #playChance: 1
+      #popUp: silicon-power-low #Добавить перевод.
+    - type: LockedWiresPanel
+    - type: WiresPanel
+    - type: ItemToggle
+      onActivate: false
+      activated: false
+      onUse: false
+    - type: DamageVisuals
+      thresholds: [ 10 ]
+      targetLayers:
+      - "enum.HumanoidVisualLayers.Chest"
+      - "enum.HumanoidVisualLayers.Head"
+      - "enum.HumanoidVisualLayers.LArm"
+      - "enum.HumanoidVisualLayers.LLeg"
+      - "enum.HumanoidVisualLayers.RArm"
+      - "enum.HumanoidVisualLayers.RLeg"
+      damageOverlayGroups:
+        Brute:
+          sprite: Mobs/Effects/brute_damage.rsi
+          color: "#00000000"
+
+
+- type: entity
+  parent: QAIAndroid
+  id: MobQAIAndroidPersonDummy
+  noSpawn: true
+  components:
+    - type: HumanoidAppearance
+      species: QAIAndroid

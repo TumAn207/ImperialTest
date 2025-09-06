@@ -1,0 +1,63 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "metallicabelly",
+        "directions": 4
+      },
+      {
+        "name": "metallicachest",
+        "directions": 4
+      },
+      {
+        "name": "metallicaleft-foot",
+        "directions": 4
+      },
+      {
+        "name": "metallicaleft-hand",
+        "directions": 4
+      },
+      {
+        "name": "metallicaleft-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "metallicaleft-thigh",
+        "directions": 4
+      },
+      {
+        "name": "metallicamanipulator",
+        "directions": 4
+      },
+      {
+        "name": "metallicaright-foot",
+        "directions": 4
+      },
+      {
+        "name": "metallicaright-hand",
+        "directions": 4
+      },
+      {
+        "name": "metallicaright-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "metallicaright-thigh",
+        "directions": 4
+      },
+      {
+        "name": "metallicaspine",
+        "directions": 4
+      },
+      {
+        "name": "metallicatail",
+        "directions": 4
+      }
+    ]
+  }

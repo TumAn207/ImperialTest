@@ -1,0 +1,69 @@
+- type: technology
+  id: ShellQAIAndroidArsenal
+  name: research-technology-Security-shell
+  icon:
+    sprite: Imperial/QAIAndroid/Technologies.rsi
+    state: security
+  discipline: Arsenal
+  tier: 2
+  cost: 7000
+  recipeUnlocks:
+  - SecurityCorps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidExperimental
+  name: research-technology-Working-shell
+  icon:
+    sprite: Imperial/QAIAndroid/Technologies.rsi
+    state: science
+  discipline: Experimental
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - SalvageCorps
+  - ScientificCorps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidIndustrial
+  name: research-technology-Eng-shell
+  icon:
+    sprite: Imperial/QAIAndroid/Technologies.rsi
+    state: engeneering
+  discipline: Industrial
+  tier: 2
+  cost: 8000
+  recipeUnlocks:
+  - AtmosphericTechnicianCorps
+  - EngineeringCorps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidCivilianServices
+  name: research-technology-Medical-shell
+  icon:
+    sprite: Imperial/QAIAndroid/Technologies.rsi
+    state: medical
+  discipline: CivilianServices
+  tier: 2
+  cost: 6000
+  recipeUnlocks:
+  - MedicalCorps
+  technologyPrerequisites:
+  - ShellQAIAndroidbasisShell
+
+- type: technology
+  id: ShellQAIAndroidbasisShell
+  name: research-technology-basis-shell
+  icon:
+    sprite: Imperial/QAIAndroid/Technologies.rsi
+    state: standart
+  discipline: Industrial
+  tier: 1
+  cost: 6000
+  recipeUnlocks:
+  - StandartCorps

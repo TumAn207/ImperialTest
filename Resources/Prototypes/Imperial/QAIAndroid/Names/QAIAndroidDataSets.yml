@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesQAIAndroidFirst
+  values:
+    prefix: names-QAIAndroid-first-dataset-
+    count: 90
+
+- type: localizedDataset
+  id: NamesQAIAndroidLast
+  values:
+    prefix: names-QAIAndroid-last-dataset-
+    count: 90

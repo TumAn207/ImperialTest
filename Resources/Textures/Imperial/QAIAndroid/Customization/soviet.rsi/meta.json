@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "sovietbelly",
+        "directions": 4
+      },
+      {
+        "name": "sovietchest",
+        "directions": 4
+      },
+      {
+        "name": "sovietleft-foot",
+        "directions": 4
+      },
+      {
+        "name": "sovietleft-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "sovietleft-thigh",
+        "directions": 4
+      },
+      {
+        "name": "sovietright-foot",
+        "directions": 4
+      },
+      {
+        "name": "sovietright-shoulder",
+        "directions": 4
+      },
+      {
+        "name": "sovietright-thigh",
+        "directions": 4
+      },
+      {
+        "name": "sovietspine",
+        "directions": 4
+      }
+    ]
+  }

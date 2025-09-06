@@ -1,0 +1,107 @@
+- type: entity
+  id: PartQAIAndroid
+  parent: [BaseItem, BasePart]
+  name: "QAIAndroid body part"
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+
+- type: entity
+  id: TorsoQAIAndroid
+  name: "QAIAndroid torso"
+  parent: [PartQAIAndroid, BaseTorso]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAItorso_m"
+
+- type: entity
+  id: HeadQAIAndroid
+  name: "QAIAndroid head"
+  parent: [PartQAIAndroid, BaseHead]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIhead_m"
+
+- type: entity
+  id: LeftArmQAIAndroid
+  name: "left QAIAndroid arm"
+  parent: [PartQAIAndroid, BaseLeftArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIl_arm"
+
+- type: entity
+  id: RightArmQAIAndroid
+  name: "right QAIAndroid arm"
+  parent: [PartQAIAndroid, BaseRightArm]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIr_arm"
+
+- type: entity
+  id: LeftHandQAIAndroid
+  name: "left QAIAndroid hand"
+  parent: [PartQAIAndroid, BaseLeftHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIl_hand"
+
+- type: entity
+  id: RightHandQAIAndroid
+  name: "right QAIAndroid hand"
+  parent: [PartQAIAndroid, BaseRightHand]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIr_hand"
+
+- type: entity
+  id: LeftLegQAIAndroid
+  name: "left QAIAndroid leg"
+  parent: [PartQAIAndroid, BaseLeftLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIl_leg"
+
+- type: entity
+  id: RightLegQAIAndroid
+  name: "right QAIAndroid leg"
+  parent: [PartQAIAndroid, BaseRightLeg]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIr_leg"
+  - type: BodyPart
+    partType: Leg
+    symmetry: Right
+
+- type: entity
+  id: LeftFootQAIAndroid
+  name: "left QAIAndroid foot"
+  parent: [PartQAIAndroid, BaseLeftFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIl_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Left
+
+- type: entity
+  id: RightFootQAIAndroid
+  name: "right QAIAndroid foot"
+  parent: [PartQAIAndroid, BaseRightFoot]
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/parts.rsi
+    state: "QAIr_foot"
+  - type: BodyPart
+    partType: Foot
+    symmetry: Right

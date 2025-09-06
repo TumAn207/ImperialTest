@@ -1,0 +1,28 @@
+- type: reaction
+  id: PhaseFluid
+  reactants:
+    Silicon:
+      amount: 1
+    Iron:
+      amount: 1
+    Lithium:
+      amount: 1
+    Zinc:
+      amount: 1
+      catalyst: true
+  products:
+    PhaseFluid: 3
+
+- type: reaction
+  id: PhaseFluidPlus
+  reactants:
+    Silicon:
+      amount: 1
+    Iron:
+      amount: 1
+    Phosphorus:
+      amount: 1
+    Dylovene:
+      amount: 1
+  products:
+    PhaseFluidPlus: 3

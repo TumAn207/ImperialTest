@@ -1,0 +1,158 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Discord TumAn207/Lapkee Designed for Imperial Space 2.0!",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "default"
+      },
+      {
+        "name": "gold"
+      },
+      {
+        "name": "silver"
+      },
+      {
+        "name": "idatmospherictechnician"
+      },
+      {
+        "name": "idbartender"
+      },
+      {
+        "name": "idbotanist"
+      },
+      {
+        "name": "idboxer"
+      },
+      {
+        "name": "idbrigmedic"
+      },
+      {
+        "name": "idcaptain"
+      },
+      {
+        "name": "idcargotechnician"
+      },
+      {
+        "name": "idcentcom"
+      },
+      {
+        "name": "idchaplain"
+      },
+      {
+        "name": "idchemist"
+      },
+      {
+        "name": "idchiefengineer"
+      },
+      {
+        "name": "idchiefmedicalofficer"
+      },
+      {
+        "name": "idcook"
+      },
+      {
+        "name": "idcoroner"
+      },
+      {
+        "name": "idcurator"
+      },
+      {
+        "name": "iddetective"
+      },
+      {
+        "name": "idgeneticist"
+      },
+      {
+        "name": "idheadofpersonnel"
+      },
+      {
+        "name": "idheadofsecurity"
+      },
+      {
+        "name": "idiaa"
+      },
+      {
+        "name": "idintern-cadet"
+      },
+      {
+        "name": "idintern-med"
+      },
+      {
+        "name": "idintern-sci"
+      },
+      {
+        "name": "idintern-service"
+      },
+      {
+        "name": "idintern-tech"
+      },
+      {
+        "name": "idjanitor"
+      },
+      {
+        "name": "idlawyer"
+      },
+      {
+        "name": "idmedicaldoctor"
+      },
+      {
+        "name": "idmusician"
+      },
+      {
+        "name": "idparamedic"
+      },
+      {
+        "name": "idpassenger"
+      },
+      {
+        "name": "idpsychologist"
+      },
+      {
+        "name": "idquartermaster"
+      },
+      {
+        "name": "idreporter"
+      },
+      {
+        "name": "idresearchdirector"
+      },
+      {
+        "name": "idroboticist"
+      },
+      {
+        "name": "idscientist"
+      },
+      {
+        "name": "idsecurityofficer"
+      },
+      {
+        "name": "idseniorengineer"
+      },
+      {
+        "name": "idseniorofficer"
+      },
+      {
+        "name": "idseniorphysician"
+      },
+      {
+        "name": "idseniorresearcher"
+      },
+      {
+        "name": "idshaftminer"
+      },
+      {
+        "name": "idstationengineer"
+      },
+      {
+        "name": "idvirologist"
+      },
+      {
+        "name": "idwarden"
+      }
+    ]
+  }

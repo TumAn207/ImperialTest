@@ -1,0 +1,7 @@
+- type: entity
+  id: BaseQAIAndroidContraband
+  parent: BaseRestrictedContraband
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Silicon ]

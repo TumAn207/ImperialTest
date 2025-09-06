@@ -99,6 +99,8 @@
       - Power
     - type: StaticPrice
       price: 1000 # Imperial Recipes Prices
+    - type: BatteryDrinkerSource
+      maxAmount: 105 # Imperial Space
 
     # Interface
     - type: BatteryInterface

@@ -25,6 +25,8 @@
     supplyRampTolerance: 5000
     supplyRampRate: 1000
   - type: StationInfiniteBatteryTarget
+  - type: BatteryDrinkerSource
+    maxAmount: 65 # Imperial Space
 
   # Interface
   - type: BatteryInterface

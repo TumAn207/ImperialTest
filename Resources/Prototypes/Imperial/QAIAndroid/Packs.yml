@@ -1,0 +1,14 @@
+- type: latheRecipePack
+  id: QAIAndroidCorps
+  recipes:
+  - SalvageCorps
+  - AtmosphericTechnicianCorps
+  - StandartCorps
+  - EngineeringCorps
+  - MedicalCorps
+  - ScientificCorps
+
+- type: latheRecipePack
+  id: QAIAndroidSecurityCorps
+  recipes:
+  - SecurityCorps

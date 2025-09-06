@@ -1,0 +1,15 @@
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetQAI
+  name: QAI headset
+  description: Test.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyQAI
+      - EncryptionKeyCommon #Добавить и другие ключи.
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/clothing/headset.rsi
+  - type: Clothing
+    sprite: Imperial/QAIAndroid/clothing/headset.rsi
