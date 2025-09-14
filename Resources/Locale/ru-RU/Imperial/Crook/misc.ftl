@@ -21,6 +21,8 @@ ent-WallBackrooms = необычная стена
     .desc = Стена. На ней, кажется, имеются обои.
 ent-Smiler = улыбающийся
     .desc = Улыбается значит добрый.
+ent-SmilerVisibility = улыбающийся
+    .desc = Улыбается значит добрый.
 ent-MobDeathmoth = смертомоль
     .desc = Эта моль откусит вам голову, если вы её погладите. Но вам всё равно.
 ent-BackroomsBacteria = бактерия
@@ -33,11 +35,13 @@ ent-ThermosRed = красный термос
     .desc = Жадность губительна. Помни об этом, начиная пить.
 ent-ThermosGray = серый термос
     .desc = Жадность губительна. Помни об этом, начиная пить.
-
+ent-ExitSignBackrooms = знак
+    .desc = Наконец-то! Выход.
 ent-PortalGatewayBackrooms = неизвестная аномалия
-    .desc = Она будто бы зовёт вас. Зайдите в неё, что может пойти не так?
+    .desc = Разрыв в пространстве неизвестной природы.
 ent-HandTeleporterBackrooms = телепорт
     .desc = Используйте, чтобы создать порталы.
+hand-glitch-hurt = Коснувшись аномалии, вы ощущаете, как ваша плоть искажается.
 
 ent-ClothingUniformJumpsuitMadzima = брейкданс костюм
     .desc = Увидимся, мисси!
@@ -120,3 +124,14 @@ ent-DoubleBedsheetWinter = большое одеяло
     .desc = Одеяло для двойной кровати.
 ent-DoubleBedsheetYellow = большое одеяло
     .desc = Одеяло для двойной кровати.
+
+ent-FoodBlueSpaceTomato = блюспейс-томат
+    .desc = Осторожнее с этим!
+ent-BlueSpaceTomatoSeeds = пакет семян блюспейс-томатов
+    .desc = { ent-SeedBase.desc }
+seeds-bluespacetomato-name = блюспейс-томат
+seeds-bluespacetomato-display-name = томатный блюспейс-куст
+reagent-name-paradoxal-juice = парадоксальный сок
+reagent-desc-paradoxal-juice = Смесь, состоящая из приятной мякоти с приправой из непредсказуемой блюспейс пыли.
+reagent-physical-desc-chaotic = хаотичное
+
