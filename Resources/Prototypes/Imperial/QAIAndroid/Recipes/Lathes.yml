@@ -59,3 +59,37 @@
   materials:
     Steel: 1800
     Glass: 800
+
+- type: latheRecipe #T1
+  id: QAIRepairOintmentInsulator
+  result: QAIRepairOintmentInsulator
+  completetime: 3
+  materials:
+    Plastic: 40
+    Steel: 10
+
+- type: latheRecipe
+  id: QAICorporateRepairPlates
+  result: QAICorporateRepairPlates
+  completetime: 3
+  materials:
+    Plastic: 50
+    Steel: 10
+
+- type: latheRecipe #T2
+  id: QAIRestoringCladding
+  result: QAIRestoringCladding
+  completetime: 3
+  materials:
+    Plastic: 40
+    Steel: 50
+    Plasma: 20
+
+- type: latheRecipe
+  id: QAISmallMaintenanceKit
+  result: QAISmallMaintenanceKit
+  completetime: 3
+  materials:
+    Plastic: 40
+    Steel: 100
+    Plasma: 20

@@ -1,0 +1,50 @@
+- type: constructionGraph
+  id: HomemadePlates
+  start: start
+  graph:
+    - node: start
+      edges:
+      - to: Plate
+        steps:
+        - material: Steel
+          amount: 5
+          doAfter: 3
+
+        - material: Plasteel
+          amount: 1
+          doAfter: 3
+
+    - node: Plate
+      entity: QAIIncompleteHomemadePlates
+      edges:
+      - to: HomemadePlates
+        steps:
+        - tool: Welding
+          doAfter: 5
+
+    - node: HomemadePlates
+      entity: QAIHomemadePlates
+
+- type: construction
+  id: HomemadePlates
+  graph: HomemadePlates
+  startNode: start
+  targetNode: HomemadePlates
+  category: construction-category-weapons
+  objectType: Item
+
+- type: entity
+  name: incomplete Homemade plates
+  parent: BaseItem
+  id: QAIIncompleteHomemadePlates
+  description: A few planks of wood stuck together.
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/brutepack-T1.rsi
+    state: brutepack
+  - type: Item
+    size: Normal
+    sprite: Imperial/QAIAndroid/Medical/brutepack-T1.rsi
+  - type: Construction
+    graph: HomemadePlates
+    node: Plate

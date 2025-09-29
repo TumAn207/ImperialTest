@@ -1,0 +1,61 @@
+- type: entity
+  id: BaseQAIDefibrillator
+  parent: [ BaseItem, PowerCellSlotMediumItem ]
+  name: The reactivator QAIAndroid
+  description: ..- Do not abuse! Restarting the systems is not equivalent to full-fledged maintenance. Try not to bring the QAI to a state where a resuscitator may be needed. The best repair is the one that is not required!
+  components:
+    - type: Sprite
+      sprite: Imperial/QAIAndroid/Reanimator.rsi
+      layers:
+        - state: icon
+        - state: iconenable
+          map: [ "enum.ToggleableVisuals.Layer" ]
+          visible: false
+          shader: unshaded
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ToggleableVisuals.Layer:
+            True: { visible: true }
+            False: { visible: false }
+    - type: Item
+      size: large
+    #- type: Speech
+      #speechVerb: Robotic
+    - type: ItemToggle
+      soundActivate:
+        path: /Audio/Items/Defib/defib_safety_on.ogg
+      soundDeactivate:
+        path: /Audio/Items/Defib/defib_safety_off.ogg
+    #- type: QAIAndroidDefibrillator
+      #doAfterDuration: 6
+    - type: DoAfter
+    - type: UseDelay
+    - type: StaticPrice
+      price: 30
+    #- type: GuideHelp
+      #guides:
+      #- Medical Doctor
+    - type: MultiHandedItem
+    - type: ToggleCellDraw
+    - type: PowerCellDraw
+      useRate: 100
+    #- type: MeleeWeapon
+      #damage:
+        #types:
+          #Blunt: 8
+    #- type: ItemToggleMeleeWeapon
+      #activatedSoundOnHit:
+        #path: /Audio/Items/Defib/defib_zap.ogg
+        #params:
+          #variation: 0.250
+      #activatedSoundOnHitNoDamage:
+        #path: /Audio/Items/Defib/defib_zap.ogg
+        #params:
+          #variation: 0.250
+          #volume: -10
+      #activatedDamage:
+        #types:
+          #Blunt: 8
+          #Shock: 16

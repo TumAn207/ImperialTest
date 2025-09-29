@@ -1,19 +1,11 @@
 - type: entity
-  id: BaseHandheldMechAnalyzer
+  id: QAIHandheldHealthAnalyzerUnpowered
   parent: BaseItem
-  name: mech analyzer
-  description: A hand-held mech scaner.
-  abstract: true
+  name: IPC Health Analyzer
   components:
   - type: Sprite
-    sprite: Objects/Specific/Mech/mecha_equipment.rsi
-    state: mecha_analyzer
-    layers:
-    - state: mecha_analyzer
-    - state: mecha_analyzer_anim
-      shader: unshaded
-      visible: true
-      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+    sprite: Imperial/QAIAndroid/Analyzer.rsi
+    state: icon
   - type: Item
     storedRotation: -90
   - type: ActivatableUI
@@ -22,14 +14,14 @@
     interfaces:
       enum.HealthAnalyzerUiKey.Key:
         type: HealthAnalyzerBoundUserInterface
+  - type: ItemToggle
+    onUse: false
   - type: HealthAnalyzer
     scanningEndSound:
       path: "/Audio/Items/Medical/healthscanner.ogg"
-    damageContainers:
-    - Mech
   - type: Tag
     tags:
-    - DiscreteHealthAnalyzer
+      - DiscreteHealthAnalyzer
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -37,16 +29,3 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
-
-- type: entity
-  abstract: true
-  parent: [BaseItem, PowerCellSlotSmallItem]
-  id: BaseHandheldComputerMech
-  components:
-  - type: ActivatableUIRequiresPowerCell
-  - type: ItemToggle
-    onUse: false # above component does the toggling
-  - type: PowerCellDraw
-    drawRate: 0
-    useRate: 20
-  - type: ToggleCellDraw

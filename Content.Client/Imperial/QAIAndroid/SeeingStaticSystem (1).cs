@@ -1,0 +1,55 @@
+using Content.Client.Imperial.Overlays.Shaders;
+using Content.Shared.Imperial.QAIAndroid.Components;
+using Content.Shared.Imperial.QAIAndroid.Systems;
+using Robust.Client.Graphics;
+using Robust.Client.Player;
+using Robust.Shared.Player;
+
+namespace Content.Client.ImperialT.Overlays;
+
+public sealed class SeeingStaticSystem : EntitySystem
+{
+    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private readonly IOverlayManager _overlayMan = default!;
+
+    private StaticOverlay _overlay = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<SeeingStaticComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<SeeingStaticComponent, ComponentShutdown>(OnShutdown);
+
+        SubscribeLocalEvent<SeeingStaticComponent, LocalPlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<SeeingStaticComponent, LocalPlayerDetachedEvent>(OnPlayerDetached);
+
+        _overlay = new();
+    }
+
+    private void OnPlayerAttached(EntityUid uid, SeeingStaticComponent component, LocalPlayerAttachedEvent args)
+    {
+        _overlayMan.AddOverlay(_overlay);
+    }
+
+    private void OnPlayerDetached(EntityUid uid, SeeingStaticComponent component, LocalPlayerDetachedEvent args)
+    {
+        _overlay.MixAmount = 0;
+        _overlayMan.RemoveOverlay(_overlay);
+    }
+
+    private void OnInit(EntityUid uid, SeeingStaticComponent component, ComponentInit args)
+    {
+        if (_player.LocalPlayer?.ControlledEntity == uid)
+            _overlayMan.AddOverlay(_overlay);
+    }
+
+    private void OnShutdown(EntityUid uid, SeeingStaticComponent component, ComponentShutdown args)
+    {
+        if (_player.LocalPlayer?.ControlledEntity == uid)
+        {
+            _overlay.MixAmount = 0;
+            _overlayMan.RemoveOverlay(_overlay);
+        }
+    }
+}

@@ -1,0 +1,7 @@
+- type: statusEffect
+  id: SeeingStatic
+
+- type: shader
+  id: SeeingStatic
+  kind: source
+  path: "/Textures/Imperial/QAIAndroid/Shaders.rsi/seeing_static.swsl"

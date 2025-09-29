@@ -31,3 +31,248 @@
       effects:
       - !type:SatiateThirst
         factor: 1
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: QAIAndroid
+          shouldHave: false
+        damage:
+          types:
+            Poison: 0.5
+
+- type: metabolizerType
+  id: QAIAndroid
+  name: metabolizer-type-qaiandroid
+
+#T1
+- type: entity
+  name: Homemade plates #Самодельные пластины
+  description: A bunch of steel and plasteel sheets bonded together, welded into a single whole. It looks very unreliable, but, surprisingly, it can take root and replace the damaged parts of the skin.
+  parent: BaseHealingItem
+  id: QAIHomemadePlates
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/brutepack-T1.rsi
+    state: brutepack
+    scale: 0.8, 0.8
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      groups:
+        slash: -10
+        blunt: -10
+        piercing: -10
+        Brute: -10
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: HardTraumapack
+    count: 1
+  - type: StackPrice
+    price: 300
+  - type: Construction
+    graph: HomemadePlates
+    node: Plate
+
+- type: entity
+  name: Repair ointment insulator #Высокотехнологичная наноизоляционная лента
+  description: The heiress of that ancient blue electrical tape, it is still used by technicians of different calibers to repair household electronics and not so much appliances. The QAI is also a toaster, and it can also be wrapped with electrical tape.
+  parent: BaseHealingItem
+  id: QAIRepairOintmentInsulator
+  components:
+  - type: Tag
+    tags:
+    - Ointment
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/OintmentT1.rsi
+    state: ointment
+    scale: 0.9, 0.9
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      groups:
+        Heat: -7
+        Cold: -7
+        Shock: -7
+        Caustic: -1.5
+    healingBeginSound:
+      path: "/Audio/Items/Medical/ointment_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/ointment_end.ogg"
+  - type: Stack
+    stackType: Ointment
+    count: 1
+  - type: StackPrice
+    price: 30
+
+#T2
+
+- type: entity
+  name: Corporate Repair Plates #Корпоративные плиты
+  description: The best DIY available for your frontier station on the mechanical body of the QAI, perfect for repairing android damage at low cost
+  parent: BaseHealingItem
+  id: QAICorporateRepairPlates
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/brutepack-T2.rsi
+    state: brutepack
+    scale: 0.8, 0.8
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      groups:
+        piercing: -17
+        blunt: -17
+        slash: -17
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: HardTraumapack
+    count: 1
+  - type: StackPrice
+    price: 300
+
+- type: entity
+  name: Small Repair Kit #Набор малого ремонта
+  description: 1
+  parent: BaseHealingItem
+  id: QAISmallMaintenanceKit
+  components:
+  - type: Tag
+    tags:
+    - Ointment
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/medical/Ointment-T2.rsi
+    state: ointment
+    scale: 0.8, 0.8
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      groups:
+        heat: -17
+        caustic: -8
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: Ointment
+    count: 1
+  - type: StackPrice
+    price: 300
+
+#T3
+
+- type: entity
+  name: Factory plates
+  description: The result of a real technical genius who was wrapped in contraband. Unfortunately, such plates are not officially provided to protect the QAI trademark, but you can buy certified QAI plates on the black market - they are in front of you. They are perfect for servicing the QAI lining.
+  parent: BaseHealingItem
+  id: QAIFactoryPlates
+  components:
+  - type: Tag
+    tags:
+    - Brutepack
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/medical/brutepack-T3.rsi
+    state: brutepack
+    scale: 0.8, 0.8
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      groups:
+        slash : -22
+        blunt: -22
+        piercing: -22
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+  - type: Stack
+    stackType: HardTraumapack
+    count: 1
+  - type: StackPrice
+    price: 300
+
+
+
+- type: entity
+  name: QAIblood pack
+  description: Contains a groundbreaking universal blood replacement created by Nanotrasen's advanced medical science.
+  parent: BaseHealingItem
+  id: QAIBloodpack
+  suffix: Full
+  components:
+  - type: Item
+    heldPrefix: bloodpack
+  - type: Tag
+    tags:
+    - Bloodpack
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/phase-blood.rsi
+    state: bloodpack
+    scale: 0.8, 0.8
+  - type: Healing
+    damageContainers:
+      - QAIAndroid
+    damage:
+      types:
+        Bloodloss: -0.5 #lowers bloodloss damage
+    ModifyBloodLevel: 15 #restores about 5% blood per use on standard humanoids.
+    healingBeginSound:
+      path: "/Audio/Items/Medical/brutepack_begin.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+    healingEndSound:
+      path: "/Audio/Items/Medical/brutepack_end.ogg"
+      params:
+        volume: 1.0
+        variation: 0.125
+  - type: Stack
+    stackType: Bloodpack
+    count: 10
+  - type: StackPrice
+    price: 10
+
+
+- type: entity
+  name: Factory plates
+  parent: QAIFactoryPlates
+  id: QAIFactoryPlatesFull
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: HardTraumapack
+    count: 10
+
+#Medkit
+
+- type: entity
+  name: Advanced repair kit
+  description: A completely official set for a no longer young electrician, designed to overhaul the internal parts of the cue, perfectly copes with its work, while having an increased repair speed compared to analogues thanks to detailed instructions with pictures.
+  parent: Medkit
+  id: QAIAdvancedRepairKit
+  components:
+  - type: Sprite
+    sprite: Imperial/QAIAndroid/Medical/T3-medkit.rsi
+    state: closed
+  - type: Item
+    size: Normal

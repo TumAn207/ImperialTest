@@ -20,6 +20,10 @@
   - HandheldStationMap
   - ClothingHeadHatWelding
   - ClothingHeadHatCone
+  - QAIRepairOintmentInsulator
+  - QAICorporateRepairPlates
+  - QAIRestoringCladding
+  - QAISmallMaintenanceKit
 
 - type: latheRecipePack
   id: AtmosStatic

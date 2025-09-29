@@ -1,0 +1,41 @@
+{
+    "version": 3,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Discord TumAn207/Lapkee Designed for Imperial Space",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "load": {
+        "srgb": false
+    },
+    "states": [
+        {
+            "name": "bloodpack-empty"
+        },
+        {
+            "name": "bloodpack-liquid-1"
+        },
+        {
+            "name": "bloodpack-liquid-2"
+        },
+        {
+            "name": "bloodpack-liquid-3"
+        },
+        {
+            "name": "bloodpack-liquid-4"
+        },
+        {
+            "name": "bloodpack-liquid-5"
+        },
+        {
+            "name": "bloodpack"
+        },
+        {
+            "name": "ointment-inhand-left"
+        },
+        {
+            "name": "ointment-inhand-right"
+        }
+    ]
+}

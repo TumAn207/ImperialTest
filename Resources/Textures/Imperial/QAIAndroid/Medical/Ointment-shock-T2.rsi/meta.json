@@ -1,0 +1,32 @@
+{
+    "version": 3,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Discord TumAn207/Lapkee Designed for Imperial Space",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "load": {
+        "srgb": false
+    },
+    "states": [
+        {
+            "name": "ointment-0"
+        },
+        {
+            "name": "ointment-1"
+        },
+        {
+            "name": "ointment-2"
+        },
+        {
+            "name": "ointment-3"
+        },
+        {
+            "name": "ointment-inhand-left"
+        },
+        {
+            "name": "ointment-inhand-right"
+        }
+    ]
+}

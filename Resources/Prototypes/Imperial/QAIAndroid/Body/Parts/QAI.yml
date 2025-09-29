@@ -17,6 +17,7 @@
       - right leg
       - left leg
       organs:
+        heart: OrganQAIAndroidHeart
         stomach: OrganQAIAndroidStomachNymph
         lungs: OrganQAIAndroidLungsNymph
     right arm:

@@ -1,0 +1,20 @@
+- type: cargoProduct
+  id: QAIFactoryPlatesFull
+  icon:
+    sprite: Imperial/QAIAndroid/medical/brutepack-T3.rsi
+    state: brutepack
+  product: QAIFactoryPlatesFull
+  cost: 5500
+  category: cargoproduct-category-name-engineering
+  group: market
+
+- type: cargoProduct
+  id: QAIAdvancedRepairKit
+  icon:
+    sprite: Imperial/QAIAndroid/Medical/T3-medkit.rsi
+    state: closed
+  product: QAIAdvancedRepairKit
+  cost: 7000
+  category: cargoproduct-category-name-engineering
+  group: market
+

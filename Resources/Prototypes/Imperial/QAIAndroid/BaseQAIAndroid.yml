@@ -17,19 +17,13 @@
         0: Alive
         130: Critical
         170: Dead
-      stateAlertDict:
-        Alive: BorgHealth
-        Critical: BorgCrit
-        Dead: BorgDead
-      showOverlays: false
-      allowRevives: true
+      #stateAlertDict:
+        #Alive: BorgHealth
+        #Critical: BorgCrit
+        #Dead: BorgDead
+      #showOverlays: false
+      #allowRevives: true
     - type: HealthExaminable
-      examinableTypes:
-        - Blunt
-        - Slash
-        - Piercing
-        - Heat
-        - Shock
       locPrefix: silicon
     - type: Tag
       tags:
@@ -52,7 +46,13 @@
     - type: NoSlip
       interactSuccessSpawn: EffectHearts
     - type: Inventory
-      templateId: human
+      templateId: QAIAndroid
+      displacements:
+        shoes:
+          sizeMaps:
+            32:
+              sprite: Imperial/QAIAndroid/displacement.rsi
+              state: shoes
     - type: Hands
     - type: Temperature
       heatDamageThreshold: 325
@@ -85,9 +85,16 @@
       channels:
       - Binary
       - Common
-    - type: Repairable
-      doAfterDelay: 10
-      allowSelfRepair: true
+    - type: StatusEffects ####
+      allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Flashed
+      - SeeingStatic
+    #- type: Repairable
+      #doAfterDelay: 10
+      #allowSelfRepair: true
     - type: ActivatableUIRequiresPanel
     - type: BorgChassis #Заменить на QAIAndroidChassisComponent.
     - type: ContainerContainer
@@ -146,9 +153,9 @@
     - type: SlowOnDamage
       speedModifierThresholds:
         60: 0.85
-        80: 0.45
+        80: 0.7
     - type: Damageable
-      damageContainer: Biological
+      damageContainer: QAIAndroid
       damageModifierSet: QAIAndroid
     - type: LightBehaviour
       behaviours:
@@ -208,6 +215,15 @@
         Brute:
           sprite: Mobs/Effects/brute_damage.rsi
           color: "#00000000"
+    - type: QAIAndroidTailSweep
+      damage:
+        types:
+          Slash: 30
+    - type: ActionGrant
+      actions:
+      - ActionXenoTailSweep
+    - type: QAIAndroid
+
 
 
 - type: entity
@@ -217,3 +233,26 @@
   components:
     - type: HumanoidAppearance
       species: QAIAndroid
+    - type: Inventory
+      templateId: QAIAndroid
+      maleDisplacements:
+        shoes:
+          sizeMaps:
+            32:
+              sprite: Imperial/QAIAndroid/displacement.rsi
+              state: shoes
+
+
+- type: entity
+  id: ActionXenoTailSweep
+  name: Tail Sweep (10) # TODO RMC14 proper plasma costs
+  description: Knock down any enemies close to you.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: Imperial/QAIAndroid/Action.rsi
+      state: tail
+    useDelay: 45
+  - type: InstantAction
+    event: !type:QAIAndroidTailSweepActionEvent

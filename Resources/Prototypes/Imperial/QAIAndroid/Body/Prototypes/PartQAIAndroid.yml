@@ -105,3 +105,11 @@
   - type: BodyPart
     partType: Foot
     symmetry: Right
+
+- type: entity
+  id: OrganQAIAndroidHeart
+  parent: OrganHumanHeart
+  name: heart
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [QAIAndroid]
