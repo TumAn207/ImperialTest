@@ -1,15 +1,10 @@
 #chairs
 - type: construction
-  name: Стул # Imperial Recipes Locale
   id: Chair
   graph: Seat
   startNode: start
   targetNode: chair
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: chair
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -17,16 +12,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Табурет # Imperial Recipes Locale
   id: Stool
   graph: Seat
   startNode: start
   targetNode: stool
   category: construction-category-furniture
-  description: Приложите ягодицы. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: stool
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -34,16 +24,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Барный стул # Imperial Recipes Locale
   id: StoolBar
   graph: Seat
   startNode: start
   targetNode: stoolBar
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: bar
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -51,16 +36,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Латунный стул # Imperial Recipes Locale
   id: ChairBrass
   graph: Seat
   startNode: start
   targetNode: chairBrass
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: brass_chair
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -68,16 +48,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Белое офисное кресло # Imperial Recipes Locale
   id: ChairOfficeLight
   graph: Seat
   startNode: start
   targetNode: chairOffice
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: office-white
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -85,16 +60,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Тёмное офисное кресло # Imperial Recipes Locale
   id: ChairOfficeDark
   graph: Seat
   startNode: start
   targetNode: chairOfficeDark
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: office-dark
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -102,16 +72,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Удобное кресло # Imperial Recipes Locale
   id: ChairComfy
   graph: Seat
   startNode: start
   targetNode: chairComfy
   category: construction-category-furniture
-  description: Выглядит удобно. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: comfy
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -119,16 +84,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Кресло пилота # Imperial Recipes Locale
   id: chairPilotSeat
   graph: Seat
   startNode: start
   targetNode: chairPilotSeat
   category: construction-category-furniture
-  description: Кресло пилота престижного корабля. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: shuttle
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -136,16 +96,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Деревянный стул # Imperial Recipes Locale
   id: ChairWood
   graph: Seat
   startNode: start
   targetNode: chairWood
   category: construction-category-furniture
-  description: Вы сидите на нём. Либо по вашей воле, либо по принуждению. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: wooden
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -153,16 +108,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Мясной стул # Imperial Recipes Locale
   id: ChairMeat
   graph: Seat
   startNode: start
   targetNode: chairMeat
   category: construction-category-furniture
-  description: Неприятно потный. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: meat
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -170,16 +120,11 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: Ритуальный стул # Imperial Recipes Locale
   id: ChairRitual
   graph: RitualSeat
   startNode: start
   targetNode: chairRitual
   category: construction-category-furniture
-  description: Выглядит неудобно. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: ritual
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -187,16 +132,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Раскладной стул # Imperial Recipes Locale
   id: ChairFolding
   graph: Seat
   startNode: start
   targetNode: chairFolding
   category: construction-category-furniture
-  description: Если вы унесёте шесть за раз - вы станете самым крутым парнем в актовом зале. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/folding_chair.rsi
-    state: folding
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -204,16 +144,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Стальная скамейка # Imperial Recipes Locale
   id: ChairSteelBench
   graph: Seat
   startNode: start
   targetNode: chairSteelBench
   category: construction-category-furniture
-  description: Длинная скамья, созданная для метро. Реально стандартный дизайн. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: steel-bench
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -221,16 +156,23 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Деревянная скамейка # Imperial Recipes Locale
+  id: StoolCard
+  graph: Seat
+  startNode: start
+  targetNode: stoolCard
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
   id: ChairWoodBench
   graph: Seat
   startNode: start
   targetNode: chairWoodBench
   category: construction-category-furniture
-  description: Получили занозу? По крайней мере, она экологически чистая. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/chairs.rsi
-    state: wooden-bench
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -238,16 +180,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Удобная красная скамейка # Imperial Recipes Locale
   id: RedComfBench
+  name: construction-recipe-red-comf-bench
   graph: Seat
   startNode: start
   targetNode: redComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Bench/comf_bench.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -255,16 +193,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Удобная синяя скамейка # Imperial Recipes Locale
   id: BlueComfBench
+  name: construction-recipe-blue-comf-bench
   graph: Seat
   startNode: start
   targetNode: blueComfBench
   category: construction-category-furniture
-  description: Скамейка с очень удобной спинкой. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Bench/comf_bench.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -273,16 +207,11 @@
 
 #tables
 - type: construction
-  name: Стол # Imperial Recipes Locale
   id: Table
   graph: Table
   startNode: start
   targetNode: Table
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырех металлических ножках. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/generic.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -290,16 +219,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Укреплённый стол # Imperial Recipes Locale
   id: TableReinforced
   graph: Table
   startNode: start
   targetNode: TableReinforced
   category: construction-category-furniture
-  description: Квадратный лист металла, стоящий на четырех металлических ножках. Очень прочный. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/reinforced.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -307,16 +231,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Стеклянный стол # Imperial Recipes Locale
   id: TableGlass
   graph: Table
   startNode: start
   targetNode: TableGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырех металлических ножках. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/glass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -324,16 +243,23 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Стол из бронестекла # Imperial Recipes Locale
+  id: TableCard
+  graph: Table
+  startNode: start
+  targetNode: TableCard
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
   id: TableReinforcedGlass
   graph: Table
   startNode: start
   targetNode: TableReinforcedGlass
   category: construction-category-furniture
-  description: Квадратный лист стекла, стоящий на четырех металлических ножках. Очень прочный. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/r_glass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -341,16 +267,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Стол из плазменного стекла # Imperial Recipes Locale
   id: TablePlasmaGlass
   graph: Table
   startNode: start
   targetNode: TablePlasmaGlass
   category: construction-category-furniture
-  description: Квадратный лист плазмы, стоящий на четырех металлических ножках. Красивый! # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/plasma.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -358,16 +279,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Латунный стол # Imperial Recipes Locale
   id: TableBrass
   graph: Table
   startNode: start
   targetNode: TableBrass
   category: construction-category-furniture
-  description: Блестящий, устойчивый к коррозии стол из латуни. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/brass.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -375,16 +291,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Деревянный стол # Imperial Recipes Locale
   id: TableWood
   graph: Table
   startNode: start
   targetNode: TableWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, он легко горит. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/wood.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -392,16 +303,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Игорный стол # Imperial Recipes Locale
   id: TableCarpet
   graph: Table
   startNode: start
   targetNode: TableCarpet
   category: construction-category-furniture
-  description: Сыграй с нами, ковбой. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/carpet.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -409,16 +315,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Чёрный причудливый стол # Imperial Recipes Locale
   id: TableFancyBlack
+  name: construction-recipe-table-fancy-black
   graph: Table
   startNode: start
   targetNode: TableFancyBlack
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/black.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -426,16 +328,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Синий причудливый стол # Imperial Recipes Locale
   id: TableFancyBlue
+  name: construction-recipe-table-fancy-blue
   graph: Table
   startNode: start
   targetNode: TableFancyBlue
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/blue.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -443,16 +341,25 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Голубой причудливый стол # Imperial Recipes Locale
+  id: TableFancySkyBlue
+  name: construction-recipe-table-fancy-sky-blue
+  graph: Table
+  startNode: start
+  targetNode: TableFancySkyBlue
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
   id: TableFancyCyan
+  name: construction-recipe-table-fancy-cyan
   graph: Table
   startNode: start
   targetNode: TableFancyCyan
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -460,16 +367,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Зелёный причудливый стол # Imperial Recipes Locale
   id: TableFancyGreen
+  name: construction-recipe-table-fancy-green
   graph: Table
   startNode: start
   targetNode: TableFancyGreen
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/green.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -477,16 +380,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Оранжевый причудливый стол # Imperial Recipes Locale
   id: TableFancyOrange
+  name: construction-recipe-table-fancy-orange
   graph: Table
   startNode: start
   targetNode: TableFancyOrange
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/orange.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -494,16 +393,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Фиолетовый причудливый стол # Imperial Recipes Locale
   id: TableFancyPurple
+  name: construction-recipe-table-fancy-purple
   graph: Table
   startNode: start
   targetNode: TableFancyPurple
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/purple.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -511,16 +406,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Розовый причудливый стол # Imperial Recipes Locale
   id: TableFancyPink
+  name: construction-recipe-table-fancy-pink
   graph: Table
   startNode: start
   targetNode: TableFancyPink
   category: construction-category-furniture
-  description: "Дорого,богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/pink.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -528,16 +419,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Красный причудливый стол # Imperial Recipes Locale
   id: TableFancyRed
+  name: construction-recipe-table-fancy-red
   graph: Table
   startNode: start
   targetNode: TableFancyRed
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/red.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -545,16 +432,12 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Белый причудливый стол # Imperial Recipes Locale
   id: TableFancyWhite
+  name: construction-recipe-table-fancy-white
   graph: Table
   startNode: start
   targetNode: TableFancyWhite
   category: construction-category-furniture
-  description: "Дорого, богато" # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/Fancy/white.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -562,16 +445,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Металлическая стойка # Imperial Recipes Locale
   id: TableCounterMetal
   graph: Table
   startNode: start
   targetNode: CounterMetal
   category: construction-category-furniture
-  description: Отличное место чтобы пропустить стаканчик. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/countermetal.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -579,16 +457,11 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: Деревянная стойка # Imperial Recipes Locale
   id: TableCounterWood
   graph: Table
   startNode: start
   targetNode: CounterWood
   category: construction-category-furniture
-  description: Беречь от огня. По слухам, она легко горит. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/Tables/counterwood.rsi
-    state: full
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -597,16 +470,11 @@
 
 #bathroom
 - type: construction
-  name: Туалет # Imperial Recipes Locale
   id: ToiletEmpty
   graph: Toilet
   startNode: start
   targetNode: toilet
   category: construction-category-furniture
-  description: НТ-451, устройство для удаления мелких отходов, основанное на вращательном моменте. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Furniture/toilet.rsi
-    state: condisposal
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -616,15 +484,10 @@
 #bedroom
 - type: construction
   id: Bed
-  name: Кровать # Imperial Recipes Locale
-  description: На ней можно лежать или спать пристёгнутым. # Imperial Recipes Locale
   graph: bed
   startNode: start
   targetNode: bed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: bed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -633,15 +496,10 @@
 
 - type: construction
   id: MedicalBed
-  name: Больничная койка # Imperial Recipes Locale
-  description: Больничная койка для реабилитации пациентов. Отдых в ней обеспечивает медленное исцеление. # Imperial Recipes Locale
   graph: bed
   startNode: start
   targetNode: medicalbed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: bed-MED
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -650,15 +508,10 @@
 
 - type: construction
   id: DogBed
-  name: Собачья лежанка # Imperial Recipes Locale
-  description: Удобная лежанка для собак. Вы даже можете пристегнуть своего питомца в случае отключения гравитации. # Imperial Recipes Locale
   graph: bed
   startNode: start
   targetNode: dogbed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: dogbed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -667,15 +520,10 @@
 
 - type: construction
   id: Dresser
-  name: Комод # Imperial Recipes Locale
-  description: Деревянный комод, в котором можно хранить вещи. # Imperial Recipes Locale
   graph: Dresser
   startNode: start
   targetNode: dresser
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: dresser
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -685,15 +533,10 @@
 #racks
 - type: construction
   id: Rack
-  name: Стойка # Imperial Recipes Locale
-  description: Стойка для хранения вещей. # Imperial Recipes Locale
   graph: Rack
   startNode: start
   targetNode: Rack
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/furniture.rsi
-    state: rack
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -703,15 +546,10 @@
 #misc
 - type: construction
   id: MeatSpike
-  name: Мясной крюк # Imperial Recipes Locale
-  description: Крюк для снятия мяса с животных. # Imperial Recipes Locale
   graph: MeatSpike
   startNode: start
   targetNode: MeatSpike
   category: construction-category-furniture
-  icon:
-    sprite: Structures/meat_spike.rsi
-    state: spike
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -720,165 +558,131 @@
 
 - type: construction
   id: Curtains
-  name: Шторы # Imperial Recipes Locale
-  description: Содержат менее 1 процента ртути. # Imperial Recipes Locale
+  name: construction-recipe-curtains-cloth
   graph: Curtains
   startNode: start
   targetNode: Curtains
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/hospital.rsi
-    state: closed
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: true
-    
-- type: construction
-  id: CurtainsBlack
-  name: Чёрные шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
-  graph: Curtains
-  startNode: start
-  targetNode: CurtainsBlack
-  category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/black.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
-  id: Синие шторы
-  name: Синие шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  id: CurtainsBlack
+  name: construction-recipe-curtains-black
+  graph: Curtains
+  startNode: start
+  targetNode: CurtainsBlack
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
+- type: construction
+  id: CurtainsBlue
+  name: construction-recipe-curtains-blue
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlue
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/blue.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
+- type: construction
+  id: CurtainsSkyBlue
+  name: construction-recipe-curtains-sky-blue
+  graph: Curtains
+  startNode: start
+  targetNode: CurtainsSkyBlue
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+
 - type: construction
   id: CurtainsCyan
-  name: Голубые шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-cyan
   graph: Curtains
   startNode: start
   targetNode: CurtainsCyan
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/cyan.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsGreen
-  name: Зелёные шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-green
   graph: Curtains
   startNode: start
   targetNode: CurtainsGreen
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/green.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsOrange
-  name: Оранжевые шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-orange
   graph: Curtains
   startNode: start
   targetNode: CurtainsOrange
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/orange.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsPink
-  name: Розовые шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-pink
   graph: Curtains
   startNode: start
   targetNode: CurtainsPink
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/pink.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsPurple
-  name: Фиолетовые шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-purple
   graph: Curtains
   startNode: start
   targetNode: CurtainsPurple
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/purple.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-    
+
 - type: construction
   id: CurtainsRed
-  name: Красные шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-red
   graph: Curtains
   startNode: start
   targetNode: CurtainsRed
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/red.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: CurtainsWhite
-  name: Белые шторы # Imperial Recipes Locale
-  description: Скрывают то, что не должны видеть другие. # Imperial Recipes Locale
+  name: construction-recipe-curtains-white
   graph: Curtains
   startNode: start
   targetNode: CurtainsWhite
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/Curtains/white.rsi
-    state: closed
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
 
 - type: construction
   id: Bookshelf
-  name: Книжный шкаф # Imperial Recipes Locale
-  description: Преимущественно наполнен эротикой. # Imperial Recipes Locale
   graph: Bookshelf
   startNode: start
   targetNode: bookshelf
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Furniture/bookshelf.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -887,15 +691,10 @@
 
 - type: construction
   id: NoticeBoard
-  name: Доска объявлений # Imperial Recipes Locale
-  description: Деревянная доска объявлений, может хранить внутри себя бумагу. # Imperial Recipes Locale
   graph: NoticeBoard
   startNode: start
   targetNode: noticeBoard
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Wallmounts/noticeboard.rsi
-    state: noticeboard
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true
@@ -905,15 +704,10 @@
 
 - type: construction
   id: Mannequin
-  name: Манекен # Imperial Recipes Locale
-  description: Деревянный манекен, предназначенный для демонстрации одежды. # Imperial Recipes Locale
   graph: Mannequin
   startNode: start
   targetNode: mannequin
   category: construction-category-furniture
-  icon:
-    sprite: Structures/Decoration/mannequin.rsi
-    state: mannequin
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: true

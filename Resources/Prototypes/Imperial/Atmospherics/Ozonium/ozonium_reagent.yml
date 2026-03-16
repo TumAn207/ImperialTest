@@ -1,0 +1,30 @@
+- type: reagent
+  id: Ozonium
+  name: reagent-name-ozonium
+  desc: reagent-desc-ozonium
+  physicalDesc: reagent-physical-desc-ozonium
+  flavor: bitter
+  color: "#00a352"
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 2.0
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:Flammable
+        multiplier: 0.8
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+           groups:
+            Airloss: 4
+    Gas:
+      effects:
+      - !type:HealthChange
+        ignoreResistances: true
+        damage:
+           groups:
+            Airloss: 8

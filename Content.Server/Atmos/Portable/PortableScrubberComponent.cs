@@ -29,7 +29,15 @@ namespace Content.Server.Atmos.Portable
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon, /// Imperial Added Thermonium
+            Gas.Thermonium, /// Imperial Added Thermonium
+            Gas.Phazonium, /// Imperial Added Phazonium and Ozonium
+            Gas.Ozonium,  /// Imperial Added Phazonium and Ozonium
+            Gas.Hydrogen, /// Imperial Added Hydrogen
+            Gas.Deuterium, /// Imperial Atmos Update start
+            Gas.HyperNoblium,
+            Gas.AntiNoblium,
+            Gas.BZ /// Imperial Atmos Update end
         };
 
         [ViewVariables(VVAccess.ReadWrite)]

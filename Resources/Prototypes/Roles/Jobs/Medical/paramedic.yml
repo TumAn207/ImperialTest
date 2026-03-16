@@ -33,3 +33,15 @@
   storage:
     back:
     - EmergencyRollerBedSpawnFolded
+    - HandheldParamedicCrewMonitor # imperial space: add portable paramedic crew monitor
+
+- type: chameleonOutfit
+  id: ParamedicChameleonOutfit
+  job: Paramedic
+  equipment:
+    head: ClothingHeadHatParamedicsoft
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatParamedicWB
+    gloves: ClothingHandsGlovesLatex

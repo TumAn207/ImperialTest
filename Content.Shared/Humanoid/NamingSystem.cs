@@ -12,6 +12,8 @@ namespace Content.Shared.Humanoid
     /// </summary>
     public sealed class NamingSystem : EntitySystem
     {
+        private static readonly ProtoId<SpeciesPrototype> FallbackSpecies = "Human";
+
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
@@ -21,8 +23,8 @@ namespace Content.Shared.Humanoid
             // Some downstream is probably gonna have this eventually but then they can deal with fallbacks.
             if (!_prototypeManager.TryIndex(species, out SpeciesPrototype? speciesProto))
             {
-                speciesProto = _prototypeManager.Index<SpeciesPrototype>("Human");
-                Log.Warning($"Unable to find species {species} for name, falling back to Human");
+                speciesProto = _prototypeManager.Index(FallbackSpecies);
+                Log.Warning($"Unable to find species {species} for name, falling back to {FallbackSpecies}");
             }
 
             switch (speciesProto.Naming)
@@ -32,14 +34,14 @@ namespace Content.Shared.Humanoid
                         ("first", GetFirstName(speciesProto, gender)));
                 case SpeciesNaming.TheFirstofLast:
                     return Loc.GetString("namepreset-thefirstoflast",
-                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto, gender))); //Imperial
+                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto)));
                 case SpeciesNaming.FirstDashFirst:
                     return Loc.GetString("namepreset-firstdashfirst",
                         ("first1", GetFirstName(speciesProto, gender)), ("first2", GetFirstName(speciesProto, gender)));
                 case SpeciesNaming.FirstLast:
                 default:
                     return Loc.GetString("namepreset-firstlast",
-                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto, gender))); //Imperial
+                        ("first", GetFirstName(speciesProto, gender)), ("last", GetLastName(speciesProto)));
             }
         }
 
@@ -48,34 +50,20 @@ namespace Content.Shared.Humanoid
             switch (gender)
             {
                 case Gender.Male:
-                    return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.MaleFirstNames));
+                    return _random.Pick(_prototypeManager.Index(speciesProto.MaleFirstNames));
                 case Gender.Female:
-                    return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.FemaleFirstNames));
+                    return _random.Pick(_prototypeManager.Index(speciesProto.FemaleFirstNames));
                 default:
                     if (_random.Prob(0.5f))
-                        return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.MaleFirstNames));
+                        return _random.Pick(_prototypeManager.Index(speciesProto.MaleFirstNames));
                     else
-                        return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.FemaleFirstNames));
+                        return _random.Pick(_prototypeManager.Index(speciesProto.FemaleFirstNames));
             }
         }
 
-        public string GetLastName(SpeciesPrototype speciesProto, Gender? gender = null)
+        public string GetLastName(SpeciesPrototype speciesProto)
         {
-            //return _random.Pick(_prototypeManager.Index<DatasetPrototype>(speciesProto.LastNames).Values);
-            //Imperial отдельные датасеты с женскими фамилиями
-            var femaleLastNamesProtoID = speciesProto.FemaleLastNames == "" ? speciesProto.LastNames : speciesProto.FemaleLastNames;
-            switch (gender)
-            {
-                case Gender.Male:
-                    return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.LastNames));
-                case Gender.Female:
-                    return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(femaleLastNamesProtoID));
-                default:
-                    if (_random.Prob(0.5f))
-                        return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(speciesProto.LastNames));
-                    else
-                        return _random.Pick(_prototypeManager.Index<LocalizedDatasetPrototype>(femaleLastNamesProtoID));
-            }
+            return _random.Pick(_prototypeManager.Index(speciesProto.LastNames));
         }
     }
 }

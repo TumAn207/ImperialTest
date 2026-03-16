@@ -2,6 +2,7 @@
 
 ui-options-title = Игровые настройки
 ui-options-tab-accessibility = Доступность
+ui-options-tab-admin = Администрация
 ui-options-tab-graphics = Графика
 ui-options-tab-controls = Управление
 ui-options-tab-audio = Звук
@@ -37,6 +38,7 @@ ui-options-lobby-music = Музыка в лобби и окончания рау
 ui-options-restart-sounds = Звуки перезапуска раунда
 ui-options-event-music = Музыка событий
 ui-options-admin-sounds = Музыка админов
+ui-options-bwoink-sound = Звуки ахелпа
 ui-options-volume-label = Громкость
 
 ## Graphics menu
@@ -47,6 +49,9 @@ ui-options-misc-label = Разное
 ui-options-interface-label = Интерфейс
 
 
+ui-options-auto-fill-highlights = Auto-fill the highlights with the character's information
+ui-options-highlights-color = Highlighs color:
+ui-options-highlights-color-example = This is an highlighted text!
 ui-options-show-held-item = Показать удерживаемый элемент рядом с курсором?
 ui-options-show-combat-mode-indicators = Показывать индикаторы боевого режима?
 ui-options-opaque-storage-window = Непрозрачность окна хранилища
@@ -77,6 +82,8 @@ ui-options-hud-theme-clockwork = Механизм
 ui-options-hud-theme-retro = Ретро
 ui-options-hud-theme-minimalist = Минимализм
 ui-options-hud-theme-ashen = Пепел
+ui-options-hud-layout-separated = Отделенный
+ui-options-hud-layout-default = По умолчанию
 ui-options-vp-stretch = Растянуть изображение для соответствия окну игры
 ui-options-vp-scale = Фиксированный масштаб окна игры:
 ui-options-vp-scale-value = x{ $scale }
@@ -215,6 +222,16 @@ ui-options-function-hotbar7 = 7 слот хотбара
 ui-options-function-hotbar8 = 8 слот хотбара
 ui-options-function-hotbar9 = 9 слот хотбара
 ui-options-function-hotbar0 = 0 слот хотбара
+ui-options-function-hotbarshift1 = Слот хотбара Shift+1
+ui-options-function-hotbarshift2 = Слот хотбара Shift+2
+ui-options-function-hotbarshift3 = Слот хотбара Shift+3
+ui-options-function-hotbarshift4 = Слот хотбара Shift+4
+ui-options-function-hotbarshift5 = Слот хотбара Shift+5
+ui-options-function-hotbarshift6 = Слот хотбара Shift+6
+ui-options-function-hotbarshift7 = Слот хотбара Shift+7
+ui-options-function-hotbarshift8 = Слот хотбара Shift+8
+ui-options-function-hotbarshift9 = Слот хотбара Shift+9
+ui-options-function-hotbarshift0 = Слот хотбара Shift+0
 ui-options-function-loadout1 = 1 страница хотбара
 ui-options-function-loadout2 = 2 страница хотбара
 ui-options-function-loadout3 = 3 страница хотбара
@@ -225,6 +242,16 @@ ui-options-function-loadout7 = 7 страница хотбара
 ui-options-function-loadout8 = 8 страница хотбара
 ui-options-function-loadout9 = 9 страница хотбара
 ui-options-function-loadout0 = 0 страница хотбара
+ui-options-function-loadoutshift1 = Смена комплектации Shift+1
+ui-options-function-loadoutshift2 = Смена комплектации Shift+2
+ui-options-function-loadoutshift3 = Смена комплектации Shift+3
+ui-options-function-loadoutshift4 = Смена комплектации Shift+4
+ui-options-function-loadoutshift5 = Смена комплектации Shift+5
+ui-options-function-loadoutshift6 = Смена комплектации Shift+6
+ui-options-function-loadoutshift7 = Смена комплектации Shift+7
+ui-options-function-loadoutshift8 = Смена комплектации Shift+8
+ui-options-function-loadoutshift9 = Смена комплектации Shift+9
+ui-options-function-loadoutshift0 = Смена комплектации Shift+0
 
 ui-options-function-shuttle-strafe-up = Стрейф вверх
 ui-options-function-shuttle-strafe-right = Стрейф вправо
@@ -277,8 +304,43 @@ ui-options-colorblind-friendly = Режим, удобный для дальто�
 ui-options-reduced-motion = Уменьшить движение визуальных эффектов
 ui-options-chat-window-opacity = Непрозрачность окна чата
 ui-options-screen-shake-intensity = Интенсивность тряски экрана
-ui-options-hud-layout-separated = Отделенный
-ui-options-hud-layout-default = По умолчанию
 ui-options-function-rotate-object-counterclockwise = Вращать против часовой стрелки
 ui-options-function-rotate-object-clockwise = Вращать по часовой стрелке
 ui-options-function-flip-object = Повернуть
+
+ui-options-admin-player-panel = Панель администратора - Список игроков
+
+ui-options-admin-player-tab-symbol-setting = Настройка символов антагонистов в столбце
+ui-options-admin-player-tab-symbol-setting-off = Без символа антагониста
+ui-options-admin-player-tab-symbol-setting-basic = Показывать стандартный символ антагониста
+ui-options-admin-player-tab-symbol-setting-specific = Показывать конкретный символ антагониста
+
+ui-options-admin-player-tab-role-setting = Настройки отображения роли
+ui-options-admin-player-tab-role-setting-roletype = Показывать тип роли
+ui-options-admin-player-tab-role-setting-subtype = Показывать подтип
+ui-options-admin-player-tab-role-setting-roletypesubtype = Показывать тип и подтип роли
+ui-options-admin-player-tab-role-setting-subtyperoletype = Показывать подтип и тип роли
+
+ui-options-admin-player-tab-color-setting = Настройки цвета
+ui-options-admin-player-tab-color-setting-off = Я не люблю цвета
+ui-options-admin-player-tab-color-setting-character = Цветить имена антагонистов
+ui-options-admin-player-tab-color-setting-roletype = Цветить все типы ролей
+ui-options-admin-player-tab-color-setting-both = Цветить оба
+
+ui-options-admin-overlay-title = Наложение администратора
+
+ui-options-admin-overlay-antag-format = Стиль метки антагониста
+ui-options-admin-overlay-antag-format-binary = Показывать статус антагониста
+ui-options-admin-overlay-antag-format-roletype = Показывать тип роли
+ui-options-admin-overlay-antag-format-subtype = Показывать подтип
+
+ui-options-admin-overlay-antag-symbol = Стиль символа антагониста
+ui-options-admin-overlay-antag-symbol-off = Без символа антагониста
+ui-options-admin-overlay-antag-symbol-basic = Показывать стандартный символ антагониста
+ui-options-admin-overlay-antag-symbol-specific = Показывать конкретный символ антагониста
+
+ui-options-admin-enable-overlay-playtime = Показывать время игры
+ui-options-admin-enable-overlay-starting-job = Показывать стартовую работу
+ui-options-admin-overlay-merge-distance = Расстояние слияния
+ui-options-admin-overlay-ghost-fade-distance = Диапазон затухания наложения призрака от мыши
+ui-options-admin-overlay-ghost-hide-distance = Диапазон скрытия наложения призрака от мыши

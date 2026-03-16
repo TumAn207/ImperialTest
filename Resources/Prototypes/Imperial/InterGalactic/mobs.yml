@@ -1,12 +1,12 @@
 - type: entity
   name: intergalactic старший инженер
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobInterGalacticCE
   suffix: InterGalactic
   components:
     - type: RandomMetadata
       nameSegments:
-      - Старший сотрудник
+      - IntergalacticCe
       - NamesLast
     - type: RandomHumanoidAppearance
       randomizeName: false
@@ -16,13 +16,13 @@
 
 - type: entity
   name: intergalactic инженер
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobInterGalacticEngineer
   suffix: InterGalactic
   components:
     - type: RandomMetadata
       nameSegments:
-      - Младший сотрудник
+      - IntergalacticEngineer
       - NamesLast
     - type: RandomHumanoidAppearance
       randomizeName: false
@@ -32,13 +32,13 @@
 
 - type: entity
   name: intergalactic атмосферный техник
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobInterGalacticAtmos
   suffix: InterGalactic
   components:
     - type: RandomMetadata
       nameSegments:
-      - Сотрудник
+      - IntergalacticAtmos
       - NamesLast
     - type: RandomHumanoidAppearance
       randomizeName: false
@@ -48,13 +48,10 @@
 
 - type: entity
   name: разведчик синдиката
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobSyndicateScout
   suffix: InterGalactic, Syndicate
   components:
-    - type: RandomMetadata
-      nameSegments:
-      - names_death_commando
     - type: NpcFactionMember
       factions:
         - Syndicate
@@ -74,13 +71,10 @@
 
 - type: entity
   name: потерянный агент синдиката
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobSyndicateLostAgent
   suffix: InterGalactic, Syndicate
   components:
-    - type: RandomMetadata
-      nameSegments:
-      - names_death_commando
     - type: NpcFactionMember
       factions:
         - Syndicate
@@ -89,14 +83,14 @@
         - SyndicateLostAgentGear
 
 - type: entity
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobOIPOutpostEmployee
   suffix: InterGalactic
   name: работник аванпоста выдачи заказов
   components:
     - type: RandomMetadata
       nameSegments:
-      - Сотрудник ПВЗ
+      - IntergalacticEmployee
       - NamesLast
     - type: RandomHumanoidAppearance
       randomizeName: false
@@ -104,7 +98,7 @@
       prototypes: [ OIPOutpostEmployeeGear ]
 
 - type: entity
-  parent: BaseMobHuman
+  parent: MobHuman
   id: MobCourierFreelance
   suffix: InterGalactic
   name: курьер-фрилансер

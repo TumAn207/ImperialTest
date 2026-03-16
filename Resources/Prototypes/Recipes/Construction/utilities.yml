@@ -7,9 +7,6 @@
   targetNode: camera
   category: construction-category-utilities
   description: Камера видеонаблюдения. Не похоже, что в ближайшее время она будет за кем-то наблюдать. Возможно. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Wallmounts/camera.rsi
-    state: camera
   objectType: Structure
   placementMode: SnapgridCenter
 
@@ -21,9 +18,6 @@
   targetNode: Telescreen
   category: construction-category-utilities
   description: Монитор видеокамер. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Machines/computers.rsi
-    state: telescreen_frame
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -36,9 +30,6 @@
   targetNode: station_map
   category: construction-category-structures
   description: Станционная карта. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Machines/station_map.rsi
-    state: station_map0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -55,9 +46,6 @@
   targetNode: apc
   category: construction-category-utilities
   description: Локальная консоль питания. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/apc.rsi
-    state: base
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -70,9 +58,6 @@
   targetNode: solarpanel
   category: construction-category-utilities
   description: Стандартная солнечная панель. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/Generation/solar_panel.rsi
-    state: solar_assembly
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -88,9 +73,6 @@
   targetNode: cable_terminal
   category: construction-category-utilities
   description: Подключить красным к аккамулятору для его зарядки. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/cable_terminal.rsi
-    state: term
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -103,9 +85,6 @@
   targetNode: substation
   category: construction-category-utilities
   description: Подстанция, предназначенная для компактных шаттлов и помещений. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/substation.rsi
-    state: substation_wall
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -118,9 +97,6 @@
   targetNode: generator
   category: construction-category-utilities
   description: Высокоэффективный термоэлектрический генератор, помещенный в настенный шкаф. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/Generation/wallmount_generator.rsi
-    state: panel
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -133,9 +109,6 @@
   targetNode: APU
   category: construction-category-utilities
   description: Вспомогательная силовая установка шаттла. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Power/Generation/wallmount_generator.rsi
-    state: panel
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -151,9 +124,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: "disposal"
 
 - type: construction
   name: Почтовый блок # Imperial Recipes Locale
@@ -165,9 +135,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: "mailing"
 
 - type: construction
   name: Утилизационная труба # Imperial Recipes Locale
@@ -179,9 +146,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: true
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-s
 
 - type: construction
   name: Маркировщик утилизационной трубы # Imperial Recipes Locale
@@ -193,9 +157,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-tagger
 
 - type: construction
   name: Ствол утилизационной трубы # Imperial Recipes Locale
@@ -207,9 +168,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-t
 
 - type: construction
   name: Маршрутизатор утилизационной трубы # Imperial Recipes Locale
@@ -221,9 +179,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j1s
   mirror: DisposalRouterFlipped
 
 - type: construction
@@ -237,9 +192,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j2s
   mirror: DisposalRouter
 
 - type: construction
@@ -252,9 +204,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: signal-router-free
   mirror: DisposalSignalRouterFlipped
 
 - type: construction
@@ -268,9 +217,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: signal-router-flipped-free
   mirror: DisposalSignalRouter
 
 - type: construction
@@ -283,9 +229,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j1
   mirror: DisposalJunctionFlipped
 
 - type: construction
@@ -299,9 +242,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-j2
   mirror: DisposalJunction
 
 - type: construction
@@ -314,13 +254,17 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-y
 
 - type: construction
-  name: Изгиб утилизационной трубы # Imperial Recipes Locale
-  description: Труба, согнутая под прямым углом. # Imperial Recipes Locale
+  id: DisposalXJunction
+  graph: DisposalPipe
+  startNode: start
+  targetNode: xJunction
+  category: construction-category-utilities
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+
+- type: construction
   id: DisposalBend
   graph: DisposalPipe
   startNode: start
@@ -328,9 +272,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/disposal.rsi
-    state: conpipe-c
 
 # ATMOS
 - type: construction
@@ -341,9 +282,6 @@
   targetNode: air_alarm
   category: construction-category-structures
   description: Воздушная сигнализация. Сигнализация.. воздуха?
-  icon:
-    sprite: Structures/Wallmounts/air_monitors.rsi
-    state: alarm0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -359,9 +297,6 @@
   targetNode: fire_alarm
   category: construction-category-structures
   description: Пожарная сигнализация. Огонь!
-  icon:
-    sprite: Structures/Wallmounts/air_monitors.rsi
-    state: fire0
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -377,9 +312,6 @@
   targetNode: sensor
   category: construction-category-structures
   description: Сенсор воздуха. Чувствует воздух.
-  icon:
-    sprite: Structures/Specific/Atmospherics/sensor.rsi
-    state: gsensor1
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -392,12 +324,43 @@
   targetNode: sensor
   category: construction-category-structures
   description: Передает на воздушную сигнализацию информацию о газе в присоединенной системе труб. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Piping/Atmospherics/gas_pipe_sensor.rsi
-    state: icon
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   objectType: Structure
   canRotate: true
+  alternativePrototypes:
+  - GasPipeSensor
+  - GasPipeSensorAlt1
+  - GasPipeSensorAlt2
+
+- type: construction
+  id: GasPipeSensorAlt1
+  hide: true
+  graph: GasPipeSensor
+  startNode: start
+  targetNode: sensorAlt1
+  category: construction-category-structures
+  placementMode: AlignAtmosPipeLayers
+  objectType: Structure
+  canRotate: true
+  alternativePrototypes:
+  - GasPipeSensor
+  - GasPipeSensorAlt1
+  - GasPipeSensorAlt2
+
+- type: construction
+  id: GasPipeSensorAlt2
+  hide: true
+  graph: GasPipeSensor
+  startNode: start
+  targetNode: sensorAlt2
+  category: construction-category-structures
+  placementMode: AlignAtmosPipeLayers
+  objectType: Structure
+  canRotate: true
+  alternativePrototypes:
+  - GasPipeSensor
+  - GasPipeSensorAlt1
+  - GasPipeSensorAlt2
 
 # ATMOS PIPES
 - type: construction
@@ -408,67 +371,216 @@
   startNode: start
   targetNode: half
   category: construction-category-utilities
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeHalf
+  - GasPipeHalfAlt1
+  - GasPipeHalfAlt2
 
 - type: construction
-  name: Газовая труба # Imperial Recipes Locale
+  id: GasPipeHalfAlt1
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: halfAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeHalf
+  - GasPipeHalfAlt1
+  - GasPipeHalfAlt2
+
+- type: construction
+  id: GasPipeHalfAlt2
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: halfAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeHalf
+  - GasPipeHalfAlt1
+  - GasPipeHalfAlt2
+
+- type: construction
   id: GasPipeStraight
-  description: Прямой сегмент трубы. # Imperial Recipes Locale
   graph: GasPipe
   startNode: start
   targetNode: straight
   category: construction-category-utilities
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeStraight
+  - GasPipeStraightAlt1
+  - GasPipeStraightAlt2
 
 - type: construction
-  name: Газовая труба изогнутая # Imperial Recipes Locale
+  id: GasPipeStraightAlt1
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: straightAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeStraight
+  - GasPipeStraightAlt1
+  - GasPipeStraightAlt2
+
+- type: construction
+  id: GasPipeStraightAlt2
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: straightAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeStraight
+  - GasPipeStraightAlt1
+  - GasPipeStraightAlt2
+
+- type: construction
   id: GasPipeBend
-  description: Труба, согнутая под прямым углом. # Imperial Recipes Locale
+  name: construction-recipe-gas-pipe-bend
   graph: GasPipe
   startNode: start
   targetNode: bend
   category: construction-category-utilities
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeBend
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeBend
+  - GasPipeBendAlt1
+  - GasPipeBendAlt2
 
 - type: construction
-  name: Газовая Т-образная труба # Imperial Recipes Locale
+  id: GasPipeBendAlt1
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: bendAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeBend
+  - GasPipeBendAlt1
+  - GasPipeBendAlt2
+
+- type: construction
+  id: GasPipeBendAlt2
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: bendAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeBend
+  - GasPipeBendAlt1
+  - GasPipeBendAlt2
+
+- type: construction
   id: GasPipeTJunction
-  description: Т-образный сегмент трубы # Imperial Recipes Locale
+  name: construction-recipe-gas-pipe-t-junction
   graph: GasPipe
   startNode: start
   targetNode: tjunction
   category: construction-category-utilities
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeTJunction
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeTJunction
+  - GasPipeTJunctionAlt1
+  - GasPipeTJunctionAlt2
 
 - type: construction
-  name: Газовая четверная труба # Imperial Recipes Locale
+  id: GasPipeTJunctionAlt1
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: tjunctionAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeTJunction
+  - GasPipeTJunctionAlt1
+  - GasPipeTJunctionAlt2
+
+- type: construction
+  id: GasPipeTJunctionAlt2
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: tjunctionAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeTJunction
+  - GasPipeTJunctionAlt1
+  - GasPipeTJunctionAlt2
+
+- type: construction
   id: GasPipeFourway
-  description: Сегмент трубы с четыремя соединениями. # Imperial Recipes Locale
+  name: construction-recipe-gas-pipe-fourway
   graph: GasPipe
   startNode: start
   targetNode: fourway
   category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeFourway
+  - GasPipeFourwayAlt1
+  - GasPipeFourwayAlt2
+
+- type: construction
+  id: GasPipeFourwayAlt1
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: fourwayAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeFourway
+  - GasPipeFourwayAlt1
+  - GasPipeFourwayAlt2
+
+- type: construction
+  id: GasPipeFourwayAlt2
+  hide: true
+  graph: GasPipe
+  startNode: start
+  targetNode: fourwayAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: true
+  alternativePrototypes:
+  - GasPipeFourway
+  - GasPipeFourwayAlt1
+  - GasPipeFourwayAlt2
+
+- type: construction
+  id: GasPipeManifold
+  graph: GasPipe
+  startNode: start
+  targetNode: manifold
+  category: construction-category-utilities
   placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeFourway
+  canBuildInImpassable: true
 
 # ATMOS UNARY
 - type: construction
@@ -481,16 +593,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
 
 - type: construction
   name: Пассивная вентиляция # Imperial Recipes Locale
@@ -502,16 +606,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
 
 - type: construction
   name: Скруббер  # Imperial Recipes Locale
@@ -523,16 +619,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/scrubber.rsi
-    state: scrub_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/scrubber.rsi
-    state: scrub_off
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
 
 - type: construction
   name: Инжектор # Imperial Recipes Locale
@@ -544,16 +632,8 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/outletinjector.rsi
-    state: injector
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/outletinjector.rsi
-    state: injector
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
 
 # ATMOS BINARY
 - type: construction
@@ -564,18 +644,46 @@
   startNode: start
   targetNode: pressurepump
   category: construction-category-utilities
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPressure
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPressure
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressurePump
+  - GasPressurePumpAlt1
+  - GasPressurePumpAlt2
+
+- type: construction
+  id: GasPressurePumpAlt1
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: pressurepumpAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressurePump
+  - GasPressurePumpAlt1
+  - GasPressurePumpAlt2
+
+- type: construction
+  id: GasPressurePumpAlt2
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: pressurepumpAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressurePump
+  - GasPressurePumpAlt1
+  - GasPressurePumpAlt2
 
 - type: construction
   name: Объёмный газовый насос # Imperial Recipes Locale
@@ -585,18 +693,46 @@
   startNode: start
   targetNode: volumepump
   category: construction-category-utilities
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpVolume
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpVolume
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasVolumePump
+  - GasVolumePumpAlt1
+  - GasVolumePumpAlt2
+
+- type: construction
+  id: GasVolumePumpAlt1
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: volumepumpAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasVolumePump
+  - GasVolumePumpAlt1
+  - GasVolumePumpAlt2
+
+- type: construction
+  id: GasVolumePumpAlt2
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: volumepumpAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasVolumePump
+  - GasVolumePumpAlt1
+  - GasVolumePumpAlt2
 
 - type: construction
   id: GasPassiveGate
@@ -606,18 +742,93 @@
   startNode: start
   targetNode: passivegate
   category: construction-category-utilities
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPassiveGate
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpPassiveGate
   conditions:
-    - !type:NoUnstackableInTile
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPassiveGate
+  - GasPassiveGateAlt1
+  - GasPassiveGateAlt2
+
+- type: construction
+  id: GasPassiveGateAlt1
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: passivegateAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPassiveGate
+  - GasPassiveGateAlt1
+  - GasPassiveGateAlt2
+
+- type: construction
+  id: GasPassiveGateAlt2
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: passivegateAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPassiveGate
+  - GasPassiveGateAlt1
+  - GasPassiveGateAlt2
+
+- type: construction
+  id: GasPressureRegulator
+  graph: GasBinary
+  startNode: start
+  targetNode: pressureregulator
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressureRegulator
+  - GasPressureRegulatorAlt1
+  - GasPressureRegulatorAlt2
+
+- type: construction
+  id: GasPressureRegulatorAlt1
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: pressureregulatorAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressureRegulator
+  - GasPressureRegulatorAlt1
+  - GasPressureRegulatorAlt2
+
+- type: construction
+  id: GasPressureRegulatorAlt2
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: pressureregulatorAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+  - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasPressureRegulator
+  - GasPressureRegulatorAlt1
+  - GasPressureRegulatorAlt2
 
 - type: construction
   id: GasValve
@@ -627,18 +838,46 @@
   startNode: start
   targetNode: valve
   category: construction-category-utilities
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpManualValve
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpManualValve
   conditions:
     - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasValve
+  - GasValveAlt1
+  - GasValveAlt2
+
+- type: construction
+  id: GasValveAlt1
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: valveAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+    - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasValve
+  - GasValveAlt1
+  - GasValveAlt2
+
+- type: construction
+  id: GasValveAlt2
+  hide: true
+  graph: GasBinary
+  startNode: start
+  targetNode: valveAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+    - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - GasValve
+  - GasValveAlt1
+  - GasValveAlt2
 
 - type: construction
   id: SignalControlledValve
@@ -648,18 +887,44 @@
   startNode: start
   targetNode: signalvalve
   category: construction-category-utilities
-  placementMode: SnapgridCenter
+  placementMode: AlignAtmosPipeLayers
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpSignalValve
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/pump.rsi
-    state: pumpSignalValve
   conditions:
   - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - SignalControlledValve
+  - SignalControlledValveAlt1
+  - SignalControlledValveAlt2
+
+- type: construction
+  id: SignalControlledValveAlt1
+  graph: GasBinary
+  startNode: start
+  targetNode: signalvalveAlt1
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+    - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - SignalControlledValve
+  - SignalControlledValveAlt1
+  - SignalControlledValveAlt2
+
+- type: construction
+  id: SignalControlledValveAlt2
+  graph: GasBinary
+  startNode: start
+  targetNode: signalvalveAlt2
+  category: construction-category-utilities
+  placementMode: AlignAtmosPipeLayers
+  canBuildInImpassable: false
+  conditions:
+    - !type:NoUnstackableInTile
+  alternativePrototypes:
+  - SignalControlledValve
+  - SignalControlledValveAlt1
+  - SignalControlledValveAlt2
 
 - type: construction
   id: GasPort
@@ -671,14 +936,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
-    state: gasCanisterPort
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeHalf
-  - sprite: Structures/Piping/Atmospherics/gascanisterport.rsi
-    state: gasCanisterPort
   conditions:
     - !type:NoUnstackableInTile
 
@@ -692,14 +949,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
-  layers:
-  - sprite: Structures/Piping/Atmospherics/pipe.rsi
-    state: pipeStraight
-  - sprite: Structures/Piping/Atmospherics/vent.rsi
-    state: vent_off
 
 - type: construction
   id: HeatExchanger
@@ -711,23 +960,15 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
-    state: heStraight
 
 - type: construction
   id: HeatExchangerBend
-  name: radiator bend
-  description: Transfers heat between the pipe and its surroundings.
   graph: GasBinary
   startNode: start
   targetNode: bendradiator
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/heatexchanger.rsi
-    state: heBend
 
 # ATMOS TRINARY
 - type: construction
@@ -740,9 +981,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasfilter.rsi
-    state: gasFilter
   mirror: GasFilterFlipped
   conditions:
     - !type:NoUnstackableInTile
@@ -758,9 +996,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasfilter.rsi
-    state: gasFilterF
   mirror: GasFilter
   conditions:
     - !type:NoUnstackableInTile
@@ -775,9 +1010,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasmixer.rsi
-    state: gasMixer
   mirror: GasMixerFlipped
   conditions:
     - !type:NoUnstackableInTile
@@ -793,9 +1025,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/gasmixer.rsi
-    state: gasMixerF
   mirror: GasMixer
   conditions:
     - !type:NoUnstackableInTile
@@ -810,9 +1039,6 @@
   category: construction-category-utilities
   placementMode: SnapgridCenter
   canBuildInImpassable: false
-  icon:
-    sprite: Structures/Piping/Atmospherics/pneumaticvalve.rsi
-    state: off
   conditions:
     - !type:NoUnstackableInTile
 
@@ -825,9 +1051,6 @@
   targetNode: intercom
   category: construction-category-structures
   description: Интерком. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Wallmounts/intercom.rsi
-    state: base
   placementMode: SnapgridCenter
   objectType: Structure
   canRotate: true
@@ -844,9 +1067,6 @@
   targetNode: signal
   category: construction-category-utilities
   description: Это таймер для подачи на устройства сигналов через определённое время. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: true
@@ -861,9 +1081,6 @@
   targetNode: screen
   category: construction-category-utilities
   description: Это таймер для подачи на устройства сигналов через определённое время, со встроенным экраном. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Wallmounts/signalscreen.rsi
-    state: signalscreen
   objectType: Structure
   canRotate: false
   placementMode: SnapgridCenter
@@ -879,11 +1096,22 @@
   targetNode: brig
   category: construction-category-utilities
   description: Это таймер для камер брига. # Imperial Recipes Locale
-  icon:
-    sprite: Structures/Wallmounts/signalscreen.rsi
-    state: signalscreen
   objectType: Structure
   canRotate: false
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+  - !type:WallmountCondition
+
+# DEFENSES
+- type: construction
+  id: WeaponEnergyTurretControlPanel
+  graph: WeaponEnergyTurretControlPanel
+  startNode: start
+  targetNode: finish
+  category: construction-category-utilities
+  objectType: Structure
+  canRotate: true
   placementMode: SnapgridCenter
   canBuildInImpassable: true
   conditions:

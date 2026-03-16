@@ -37,3 +37,18 @@ marking-TattooCampbellLeftLeg-tattoo_campbell_l_leg = Татуировка, ле
 marking-TattooCampbellRightLeg-tattoo_campbell_r_leg = Татуировка, правая нога (Кэмпбелль)
 marking-TattooCampbellLeftArm-tattoo_campbell_l_arm = Татуировка, левая рука (Кэмпбелль)
 marking-TattooCampbellRightArm-tattoo_campbell_r_arm = Татуировка, правая рука (Кэмпбелль)
+
+marking-TattooEyeMothRight-tattoo_eye_moth_r = Правый глаз (Мотылёк)
+marking-TattooEyeMothRight = Правый глаз (Мотылёк)
+
+marking-TattooEyeMothLeft-tattoo_eye_moth_l = Левый глаз (Мотылёк)
+marking-TattooEyeMothLeft = Левый глаз (Мотылёк)
+
+marking-TattooEyeshadowUpper-tattoo_eyeshadow_upper = Тени для век (Верхние)
+marking-TattooEyeshadowUpper = Тени для век (Верхние)
+
+marking-TattooEyeshadowLower-tattoo_eyeshadow_lower = Тени для век (Нижние)
+marking-TattooEyeshadowLower = Тени для век (Нижние)
+
+marking-TattooEyeshadowLowerReptilian-tattoo_eyeshadow_lower_reptilian = Тени для век (Нижние)
+marking-TattooEyeshadowLowerReptilian = Тени для век (Нижние)

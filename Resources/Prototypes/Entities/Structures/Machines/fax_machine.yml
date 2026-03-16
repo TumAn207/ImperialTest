@@ -48,6 +48,9 @@
       whitelist:
         components:
           - FaxableObject #used to be PaperComponent - brainfood1183
+      blacklist:
+        components:
+          - CargoSlip
   - type: GenericVisualizer
     visuals:
       enum.PowerDeviceVisuals.Powered:
@@ -112,5 +115,5 @@
     - type: FaxMachine
       name: "Captain's Office"
       receiveNukeCodes: true
-    - type: StealTarget
-      stealGroup: FaxMachineCaptain
+    # - type: StealTarget # Закомментировано, т.к данного факса на картах нет // Imperial Space
+    #   stealGroup: FaxMachineCaptain

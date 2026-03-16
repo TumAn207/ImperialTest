@@ -1,4 +1,13 @@
 - type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudBase
+  abstract: true
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StealTarget
+    stealGroup: ClothingEyesHuds
+
+- type: entity
   id: ShowSecurityIcons
   abstract: true
   categories: [ HideSpawnMenu ]
@@ -6,6 +15,7 @@
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
+  - type: ShowContrabandDetails
 
 - type: entity
   id: ShowMedicalIcons
@@ -16,7 +26,7 @@
   - type: ShowHealthIcons
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: ClothingEyesHudBase
   id: ClothingEyesHudDiagnostic
   name: diagnostic hud
   description: A heads-up display capable of analyzing the integrity and status of robotics and exosuits. Made out of see-borg-ium.
@@ -29,9 +39,14 @@
     damageContainers:
     - Inorganic
     - Silicon
+    #Imperial Space Pirates: New Horizon start
+  - type: Tag
+    tags:
+    - HudDiagnostic # Imperial Space Pirates: New Horizon End
+  - type: ShowAccessReaderSettings
 
 - type: entity
-  parent: [ClothingEyesBase, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowMedicalIcons]
   id: ClothingEyesHudMedical
   name: medical hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their health status.
@@ -43,9 +58,11 @@
   - type: Tag
     tags:
     - HudMedical
+    - PetWearable
+    - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSecurityContraband]
   id: ClothingEyesHudSecurity
   name: security hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and security records.
@@ -57,9 +74,11 @@
   - type: Tag
     tags:
     - HudSecurity
+    - PetWearable
+    - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, BaseCommandContraband]
+  parent: [ClothingEyesHudBase, BaseCommandContraband]
   id: ClothingEyesHudCommand
   name: administration hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status.
@@ -69,9 +88,13 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/command.rsi
   - type: ShowJobIcons
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: ClothingEyesHudBase
   id: ClothingEyesHudBeer
   name: beer goggles
   description: A pair of sunHud outfitted with apparatus to scan reagents, as well as providing an innate understanding of liquid viscosity while in motion.
@@ -81,12 +104,15 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/beergoggles.rsi
   - type: ShowThirstIcons
-  - type: StealTarget
-    stealGroup: ClothingEyesHudBeer
   - type: SolutionScanner
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+    - HudBeer # Imperial Space Pirates: New Horizon
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: ClothingEyesHudBase
   id: ClothingEyesHudFriedOnion
   name: fried onion goggles
   description: Filler
@@ -96,7 +122,7 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/friedonion.rsi
   - type: ShowHungerIcons
-  - type: Food
+  - type: Edible
   - type: SolutionContainerManager
     solutions:
       food:
@@ -110,7 +136,7 @@
       - greasey
 
 - type: entity
-  parent: ClothingEyesBase
+  parent: ClothingEyesHudBase
   id: ClothingEyesHudOnionBeer
   name: thungerst goggles
   description: Filler
@@ -123,7 +149,7 @@
   - type: ShowThirstIcons
 
 - type: entity
-  parent: [ClothingEyesBase, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowMedicalIcons]
   id: ClothingEyesHudMedOnion
   name: medonion hud
   description: Filler
@@ -135,7 +161,7 @@
   - type: ShowHungerIcons
 
 - type: entity
-  parent: [ClothingEyesBase, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowMedicalIcons]
   id: ClothingEyesHudMedOnionBeer
   name: medthungerst hud
   description: Filler
@@ -148,7 +174,7 @@
   - type: ShowThirstIcons
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons, BaseSecurityCommandContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons, BaseSecurityCommandContraband]
   id: ClothingEyesHudMedSec
   name: medsec hud
   description: An eye display that looks like a mixture of medical and security huds.
@@ -160,9 +186,15 @@
   - type: Construction
     graph: HudMedSec
     node: medsecHud
+  # Imperial Space Surgery Start
+  - type: Tag
+    tags:
+    - HudMedical
+    - HudSecurity
+  # Imperial Space Surgery End
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesHudMultiversal
   name: multiversal hud
   description: Filler
@@ -178,7 +210,7 @@
   - type: ShowSyndicateIcons
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons]
   id: ClothingEyesHudOmni
   name: omni hud
   description: Filler
@@ -196,7 +228,7 @@
   - type: ShowSyndicateIcons
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSyndicateContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband]
   id: ClothingEyesHudSyndicate
   name: syndicate visor
   description: The syndicate's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
@@ -206,12 +238,16 @@
   - type: Clothing
     sprite: Clothing/Eyes/Hud/synd.rsi
   - type: ShowSyndicateIcons
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSyndicateContraband]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseSyndicateContraband]
   id: ClothingEyesHudSyndicateAgent
-  name: syndicate agent visor
-  description: The Syndicate Agent's professional heads-up display, designed for quick diagnosis of their team's status.
+  name: syndicate medical visor
+  description: The Syndicate Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.
   components:
   - type: Sprite
     sprite: Clothing/Eyes/Hud/syndagent.rsi
@@ -219,11 +255,18 @@
     sprite: Clothing/Eyes/Hud/syndagent.rsi
   - type: ShowSyndicateIcons
   - type: ShowHealthBars
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
 
 - type: entity
   parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons]
   id: ClothingEyesGlassesHiddenSecurity
   suffix: Syndicate
+  components:
+  - type: StealTarget
+    stealGroup: ClothingEyesHuds
 
 - type: entity
   parent: [ClothingEyesHudMedical, ClothingHeadEyeBaseFlippable]
@@ -235,6 +278,17 @@
     sprite: Clothing/Eyes/Hud/medpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/medpatch.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+    - HudMedical
+    - EyepatchMedical #Imperial Space Pirates: New Horizon
+  #Imperial Space Pirates: New Horizon start
+  - type: Construction
+    graph: MedicalEyepatchHud
+    node: medicalEyepatch
+    #Imperial Space Pirates: New Horizon end
 
 - type: entity
   parent: [ClothingEyesEyepatchHudMedical, ClothingHeadEyeBaseFlipped]
@@ -251,6 +305,17 @@
     sprite: Clothing/Eyes/Hud/secpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/secpatch.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+    - HudSecurity
+    - EyepatchSecurity #Imperial Space Pirates: New Horizon
+  #Imperial Space Pirates: New Horizon start
+  - type: Construction
+    graph: SecurityEyepatchHud
+    node: securityEyepatch
+  #Imperial Space Pirates: New Horizon end
 
 - type: entity
   parent: [ClothingEyesEyepatchHudSecurity,  ClothingHeadEyeBaseFlipped]
@@ -267,6 +332,14 @@
     sprite: Clothing/Eyes/Hud/beerpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/beerpatch.rsi
+  # Imperial Space Pirates: New Horizon start
+  - type: Tag
+    tags:
+    - EyepatchBeer
+  - type: Construction
+    graph: BeerEyepatchHud
+    node: beerEyepatch
+  # Imperial Space Pirates: New Horizon end
 
 - type: entity
   parent: [ClothingEyesEyepatchHudBeer, ClothingHeadEyeBaseFlipped]
@@ -283,6 +356,14 @@
     sprite: Clothing/Eyes/Hud/diagpatch.rsi
   - type: Clothing
     sprite: Clothing/Eyes/Hud/diagpatch.rsi
+    #Imperial Space Pirates: New Horizon start
+  - type: Tag
+    tags:
+    - EyepatchDiagnostic
+  - type: Construction
+    graph: DiagnosticEyepatchHud
+    node: diagnosticEyepatch
+    #Imperial Space Pirates: New Horizon end
 
 - type: entity
   parent: [ClothingEyesEyepatchHudDiag, ClothingHeadEyeBaseFlipped]

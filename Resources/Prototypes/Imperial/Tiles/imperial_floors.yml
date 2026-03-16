@@ -185,7 +185,6 @@
   itemDrop: SnowballIce
   friction: 0.05
   mobFriction: 0.5
-  mobFrictionNoInput: 0.05
   mobAcceleration: 2
   heatCapacity: 10000
 
@@ -208,6 +207,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorCrossWoodBroken
@@ -228,6 +228,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorDarkWood
@@ -248,6 +249,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorDarkWoodBroken
@@ -268,6 +270,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorLargeWood
@@ -288,6 +291,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorLargeWoodBroken
@@ -308,6 +312,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorLongWood
@@ -328,6 +333,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorLongWoodBroken
@@ -348,6 +354,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorWoodenTile
@@ -368,6 +375,7 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true
 
 - type: tile
   id: FloorWoodenTileBroken
@@ -388,3 +396,4 @@
     collection: BarestepWood
   itemDrop: MaterialWoodPlank1
   heatCapacity: 10000
+  weather: true

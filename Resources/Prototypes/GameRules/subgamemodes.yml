@@ -16,20 +16,33 @@
     maxDifficulty: 2.5
   - type: AntagSelection
     agentName: thief-round-end-agent-name
+    selectionTime: IntraPlayerSpawn
     definitions:
     - prefRoles: [ Thief ]
       max: 3
-      playerRatio: 15
+      playerRatio: 20
       lateJoinAdditional: true
       allowNonHumans: true
       multiAntagSetting: NotExclusive
       startingGear: ThiefGear
+      ### Imperial Syndie Borg
+      blacklist:
+        components:
+        - BorgTransponder
+      ### Imperial Syndie Borg End
       components:
       - type: Pacified
+      - type: Thieving
+        stripTimeReduction: 2
+        stealthy: true
       mindRoles:
       - MindRoleThief
       briefing:
         sound: "/Audio/Misc/thief_greeting.ogg"
+  - type: DynamicRuleCost
+    cost: 75
+  - type: GameRule
+    cancelPresetOnTooFewPlayers: false
 
 # Needs testing
 - type: entity
@@ -61,5 +74,38 @@
         nameSegments:
         - NamesWizardFirst
         - NamesWizardLast
+        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
+  - type: GameRule
+    cancelPresetOnTooFewPlayers: false
+
+- type: entity
+  parent: BaseXenoborgsRule
+  id: SubXenoborgs
+  components:
+  - type: GameRule
+    minPlayers: 30
+    cancelPresetOnTooFewPlayers: false
+  - type: AntagMultipleRoleSpawner
+    antagRoleToPrototypes:
+      MothershipCore: [ MothershipCore ]
+      Xenoborg: [ XenoborgEngi, XenoborgHeavy, XenoborgScout, XenoborgStealth ]
+    pickAndTake: true
+  - type: AntagSelection
+    selectionTime: PrePlayerSpawn
+    definitions:
+    - prefRoles: [ MothershipCore ]
+      fallbackRoles: [ Xenoborg ]
+      spawnerPrototype: SpawnPointGhostRoleMothershipCore
+      mindRoles:
+      - MindRoleMothershipCore
+    - prefRoles: [ Xenoborg ]
+      fallbackRoles: [ MothershipCore ]
+      spawnerPrototype: SpawnPointGhostRoleXenoborg
+      mindRoles:
+      - MindRoleXenoborg
+      min: 4
+      max: 4
+  - type: DynamicRuleCost
+    cost: 200

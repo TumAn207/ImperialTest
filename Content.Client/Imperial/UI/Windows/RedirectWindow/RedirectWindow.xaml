@@ -1,0 +1,34 @@
+<iui:RedirectWindow
+    xmlns="https://spacestation14.io"
+    xmlns:i="clr-namespace:Content.Client.Imperial.UI"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    xmlns:iui="clr-namespace:Content.Client.Imperial.UI.Windows.RedirectWindow"
+    HeaderText="Imperial"
+    MinWidth="500"
+    SetWidth="500">
+    <BoxContainer Name="Contents" Access="Public" Orientation="Vertical" VerticalAlignment="Center" Margin="20 45 20 20">
+        <Label Name="HeaderLabelText" Text="{Loc 'imperial-pass-ui-redirect-header'}" StyleClasses="LabelSubTextPass1" Access="Public" />
+        <controls:HSpacer Spacing="5"/>
+        <RichTextLabel Name="InfoText" StyleClasses="LabelSubTextPassMediumBuy" Access="Public" />
+        <controls:HSpacer Spacing="20"/>
+        <i:ImperialLineEdit Name="RedirectLink" Editable="False" Access="Public" />
+        <controls:HSpacer Spacing="20"/>
+
+        <BoxContainer Name="ButtonsContainer" Access="Public" HorizontalAlignment="Stretch" Orientation="Horizontal" HorizontalExpand="True" MinSize="0 30" >
+            <i:BaseImperialButton Name="RedirectButton" HorizontalAlignment="Stretch" HorizontalExpand="True" StyleClasses="PassButtonMedium">
+                <Label Name="RedirectButtonText" Text="{Loc 'imperial-pass-ui-redirect-accept' }" HorizontalAlignment="Center" Access="Public" />
+            </i:BaseImperialButton>
+
+            <i:BaseImperialButton
+                Name="CancelButton"
+                MinWidth="50"
+                StyleClasses="PassButtonMedium"
+                NormalColor="#676767"
+                HoverColor="#808080"
+                PressedColor="#676767"
+                Access="Public"
+                Text="{Loc 'imperial-pass-ui-cancel'}">
+            </i:BaseImperialButton>
+        </BoxContainer>
+    </BoxContainer>
+</iui:RedirectWindow>

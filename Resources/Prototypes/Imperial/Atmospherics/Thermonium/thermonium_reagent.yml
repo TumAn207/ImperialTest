@@ -1,0 +1,33 @@
+- type: reagent
+  id: Thermonium
+  name: reagent-name-thermonium
+  desc: reagent-desc-thermonium
+  physicalDesc: reagent-physical-desc-thermonium
+  flavor: bitter
+  color: "#FFA500"
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 2.0
+  reactiveEffects:
+    Flammable:
+      methods: [ Touch ]
+      effects:
+      - !type:Flammable
+        multiplier: 0.8
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Radiation: 2.66
+    Gas:
+      effects:
+      - !type:HealthChange
+        ignoreResistances: true
+        damage:
+           groups:
+            Brute: -1.33
+            Burn: -2
+            Toxin: -1.33
+            Airloss: -0.66

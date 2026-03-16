@@ -1,0 +1,14 @@
+- type: Tag
+  id: SCP
+
+- type: Tag
+  id: Flametrowher
+
+- type: Tag
+  id: FlametrowherTank
+
+- type: Tag
+  id: EncryptionNedraconnection
+
+- type: Tag
+  id: EncryptionNedraCMDconnection

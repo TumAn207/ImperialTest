@@ -22,6 +22,11 @@
   - MagazineBoxRiflePractice
   - WeaponDisablerPractice
   - WeaponLaserCarbinePractice
+  - MagazineLightRiflePractice
+  - MagazineRiflePractice
+  - MagazinePistolPractice
+  - SpeedLoaderMagnumPractice
+  - MagazinePistolSubMachineGunPractice
   - WeaponFlareGunSecurity
 
 # Shared between secfab and emagged autolathe
@@ -33,10 +38,13 @@
   - MagazineBoxLightRifle
   - MagazineBoxMagnum
   - MagazineBoxPistol
+  - MagazineBoxPistolRubber #Imperial Space rubber pistol ammo box
   - MagazineBoxRifle
   - MagazineLightRifle
   - MagazineLightRifleEmpty
   - MagazinePistol
+  - MagazinePistolRubber #Imperial Space rubber pistol magazine
+  - MagazinePistolRubberEmpty #Imperial Space empty rubber pistol magazine
   - MagazinePistolEmpty
   - MagazinePistolSubMachineGun
   - MagazinePistolSubMachineGunEmpty
@@ -44,9 +52,6 @@
   - MagazinePistolSubMachineGunTopMountedEmpty
   - MagazineRifle
   - MagazineRifleEmpty
-  - MagazineShotgun
-  - MagazineShotgunEmpty
-  - MagazineShotgunSlug
   - SpeedLoaderMagnum
   - SpeedLoaderMagnumEmpty
 
@@ -70,6 +75,7 @@
   - PowerCageMedium
   - PowerCageSmall
   - TelescopicShield
+  - ClothingBackpackHarmpack
 
 - type: latheRecipePack
   id: SecurityBoards
@@ -78,12 +84,15 @@
   - ShuttleGunFriendshipCircuitboard
   - ShuttleGunPerforatorCircuitboard
   - ShuttleGunSvalinnMachineGunCircuitboard
+  - MetalDetectorCircuitboard # Imperial Space Metal Detector
 
 - type: latheRecipePack
   parent:
   - ScienceExplosives # sec gets everything for modular grenade making that sci does
   id: SecurityExplosives
   recipes:
+  - CableDetStack1
+  - EmptyDetonator
   - ExplosivePayload
   - GrenadeBlast
   - GrenadeEMP
@@ -103,12 +112,17 @@
   - MagazineBoxMagnumIncendiary
   - MagazineBoxMagnumUranium
   - MagazineBoxPistolIncendiary
+  - MagazineBoxPistolRubber #Imperial Space rubber pistol ammo box
   - MagazineBoxPistolUranium
   - MagazineBoxRifleIncendiary
   - MagazineBoxRifleUranium
   - MagazineLightRifleIncendiary
   - MagazineLightRifleUranium
   - MagazinePistolIncendiary
+  - MagazinePistolRubber #Imperial Space rubber pistol magazine
+  - MagazinePistolRubberEmpty #Imperial Space empty rubber pistol magazine
+  - MagazinePistolHighCapacityRubberImperial #Imperial Space rubber hi-cap pistol magazine
+  - MagazinePistolHighCapacityRubberImperialEmpty #Imperial Space empty rubber hi-cap pistol magazine
   - MagazinePistolUranium
   - MagazinePistolSubMachineGunIncendiary
   - MagazinePistolSubMachineGunUranium
@@ -127,6 +141,7 @@
   - WeaponLaserCannon
   - WeaponLaserCarbine
   - WeaponXrayCannon
+  - WeaponTemperatureGun
 
 - type: latheRecipePack
   id: SecurityDisablers

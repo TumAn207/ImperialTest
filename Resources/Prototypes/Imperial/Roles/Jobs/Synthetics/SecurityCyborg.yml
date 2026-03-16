@@ -24,12 +24,41 @@
   defaultModules:
   - BorgModuleJawsSecurity
   - BorgModuleNonLethalSecurity
+  - BorgModuleLethalSecurity
 
   addComponents:
   - type: ShowJobIcons
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: FlashImmunity
+  - type: CriminalRecordsConsole
+  - type: Stripping
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCamera
+  - type: SurveillanceCameraMonitor
+  - type: UserInterface
+    interfaces:
+      enum.BorgUiKey.Key:
+        type: BorgBoundUserInterface
+      enum.CriminalRecordsConsoleKey.Key:
+        type: CriminalRecordsConsoleBoundUserInterface
+      enum.SurveillanceCameraMonitorUiKey.Key:
+        type: SurveillanceCameraMonitorBoundUserInterface
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.CriminalRecordsConsoleKey.Key:
+        toggleAction: ActionShowStationRecords
+      enum.SurveillanceCameraMonitorUiKey.Key:
+        toggleAction: ActionShowCameraMonitor
+  - type: MobThresholds
+    thresholds:
+     0: Alive
+     130: Critical
+     180: Dead
 
   radioChannels:
   - Security

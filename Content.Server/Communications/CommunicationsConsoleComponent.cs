@@ -67,5 +67,17 @@ namespace Content.Server.Communications
         /// </summary>
         [DataField]
         public SoundSpecifier Sound = new SoundPathSpecifier("/Audio/Announcements/announce.ogg");
+
+        /// <summary>
+        /// Hides the sender identity (If they even have one).
+        /// In practise this removes the "Sent by ScugMcWawa (Slugcat Captain)" at the bottom of the announcement.
+        /// </summary>
+        [DataField]
+        public bool AnnounceSentBy = true;
+        // Imperial Space Start Возможность смены уровня угрозы через консоль
+        [ViewVariables]
+        [DataField]
+        public bool CanChangeAlertLevel = true;
+        // Imperial Space End
     }
 }

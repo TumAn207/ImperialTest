@@ -1,13 +1,13 @@
-﻿using Content.Server.Explosion.EntitySystems;
-using Content.Server.Power.Components;
-using Content.Shared.Examine;
-using Robust.Shared.Utility;
 using Content.Server.Chat.Systems;
-using Content.Server.Station.Systems;
-using Robust.Shared.Timing;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
+using Content.Server.Explosion.EntitySystems;
+using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Station.Systems;
+using Content.Shared.Examine;
+using Content.Shared.Power.Components;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 
 namespace Content.Server.PowerSink
 {
@@ -66,9 +66,9 @@ namespace Content.Server.PowerSink
                 if (!transform.Anchored)
                     continue;
 
-                _battery.SetCharge(entity, battery.CurrentCharge + networkLoad.NetworkLoad.ReceivingPower / 1000, battery);
+                _battery.ChangeCharge((entity, battery), networkLoad.NetworkLoad.ReceivingPower * frameTime);
 
-                var currentBatteryThreshold = battery.CurrentCharge / battery.MaxCharge;
+                var currentBatteryThreshold = _battery.GetChargeLevel((entity, battery));
 
                 // Check for warning message threshold
                 if (!component.SentImminentExplosionWarningMessage &&
@@ -88,9 +88,15 @@ namespace Content.Server.PowerSink
                         break;
                     }
                 }
-
+                //Imperial Space Pirates: New Horizon; Start
+                if(component.ExplodeOnFullCharge != true)
+                {
+                    return;
+                }
+                //Imperial Space Pirates: New Horizon; End
+                
                 // Check for explosion
-                if (battery.CurrentCharge < battery.MaxCharge)
+                if (!_battery.IsFull((entity, battery)))
                     continue;
 
                 if (component.ExplosionTime == null)
@@ -111,7 +117,7 @@ namespace Content.Server.PowerSink
             foreach (var (entity, component) in toRemove)
             {
                 _explosionSystem.QueueExplosion(entity, "PowerSink", 2000f, 4f, 20f, canCreateVacuum: true);
-                EntityManager.RemoveComponent(entity, component);
+                RemComp(entity, component);
             }
         }
 
@@ -128,7 +134,8 @@ namespace Content.Server.PowerSink
 
             _chat.DispatchStationAnnouncement(
                 station.Value,
-                Loc.GetString("powersink-imminent-explosion-announcement"),
+                //Imperial Space Pirates:New Horizon
+                Loc.GetString(powerSinkComponent.ImminentExplosionMessage),
                 playDefaultSound: true,
                 colorOverride: Color.Yellow
             );

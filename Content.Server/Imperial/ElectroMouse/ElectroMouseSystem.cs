@@ -38,8 +38,31 @@ using Robust.Shared.Physics;
 using Content.Shared.Body.Components;
 using CollisionGroup = Content.Shared.Physics.CollisionGroup;
 using Content.Server.Chat.Systems;
+using Content.Shared.Light.Components;
+using Content.Shared.Damage.Components;
+using Content.Shared.Power.Components;
+using Content.Shared.Damage.Systems;
+using Content.Shared.Body;
 
 namespace Content.Server.Imperial.ElectroMouse.EntitySystems;
+
+/*
+　　　　　　　　　　_,.. -──- ､,
+　　　　　　　　,　'" 　 　　　 　　 `ヽ.
+　　　　　　 ／/¨7__　　/ 　 　 i　 _厂廴
+　　　　　 /￣( ノ__/　/{　　　　} ｢　（_冫}
+　　　　／￣l＿// 　/-|　 ,!　 ﾑ ￣|＿｢ ＼＿_
+　　. イ　 　 ,　 /!_∠_　|　/　/_⊥_,ﾉ ハ　 　イ
+　　　/ ／ / 　〃ん心 ﾚ'|／　ｆ,心 Y　i ＼_＿＞　
+　 ∠イ 　/　 　ﾄ弋_ツ　　 　 弋_ﾂ i　 |　 | ＼
+　 _／ _ノ|　,i　⊂⊃　　　'　　　⊂⊃ ./　 !､＿ン
+　　￣　　∨|　,小、　　` ‐ ' 　　 /|／|　/
+　 　 　 　 　 Y　|ﾍ＞ 、 ＿ ,.　イﾚ|　 ﾚ'
+　　　　　　 r'.| 　|;;;入ﾞ亠―亠' );;;;;! 　|､
+　　　　　 ,ノ:,:|.　!|く　__￣￣￣__У　ﾉ|:,:,ヽ
+　　　　　(:.:.:.:ﾑ人!ﾍ　 　` ´ 　　 厂|ノ:.:.:丿
+*/
+
 
 public sealed partial class ElectroMouseSystem : EntitySystem
 {
@@ -255,9 +278,9 @@ public sealed partial class ElectroMouseSystem : EntitySystem
 
         AddEnergy(uid, component, -10);
 
-        _stun.TryStun(uid, TimeSpan.FromSeconds(2f), false);
+        _stun.TryUpdateStunDuration(uid, TimeSpan.FromSeconds(2f));
         _beam.TryCreateBeam(uid, target, "LightningRevenant");
-        _stun.TryParalyze(target, TimeSpan.FromSeconds(7f), true);
+        _stun.TryAddParalyzeDuration(target, TimeSpan.FromSeconds(7f));
     }
 
     private void OnSpeed(EntityUid uid, ElectroMouseComponent component, ElectroMouseSpeedEvent args)
@@ -298,7 +321,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
             _popup.PopupEntity("Недостаточно энергии", uid, uid);
             return;
         }
-        _empSystem.EmpPulse(coords, component.EmpRadius, 10000, 120);
+        _empSystem.EmpPulse(coords, component.EmpRadius, 10000, TimeSpan.FromSeconds(120));
 
         AddEnergy(uid, component, -20);
 
@@ -386,7 +409,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
         if (HasComp<DoorComponent>(target))
             return;
 
-        if (HasComp<ApcPowerReceiverComponent>(target) || HasComp<HitscanBatteryAmmoProviderComponent>(target) || HasComp<ProjectileBatteryAmmoProviderComponent>(target) || HasComp<PowerNetworkBatteryComponent>(target))
+        if (HasComp<ApcPowerReceiverComponent>(target) || HasComp<BatteryAmmoProviderComponent>(target) || HasComp<PowerNetworkBatteryComponent>(target))
         {
             args.Handled = true;
 
@@ -481,13 +504,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
 
     private void BeginHarvestDoAfter(EntityUid uid, EntityUid target, ElectroMouseComponent comp)
     {
-        if (TryComp<HitscanBatteryAmmoProviderComponent>(target, out var hitprov) && hitprov.Shots == 0)
-            return;
-        if (TryComp<ProjectileBatteryAmmoProviderComponent>(target, out var projprov) && projprov.Shots == 0)
-            return;
-        if (HasComp<HitscanBatteryAmmoProviderComponent>(target) && !comp.CanBattery)
-            return;
-        if (HasComp<ProjectileBatteryAmmoProviderComponent>(target) && !comp.CanBattery)
+        if (TryComp<BatteryAmmoProviderComponent>(target, out var hitprov) && hitprov.Shots == 0)
             return;
 
         if (HasComp<PowerNetworkBatteryComponent>(target))
@@ -507,7 +524,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
 
         if (!_doAfter.TryStartDoAfter(doAfter))
             return;
-        _stun.TryStun(uid, TimeSpan.FromSeconds(5f), false);
+        _stun.TryUpdateStunDuration(uid, TimeSpan.FromSeconds(5f));
 
         _popup.PopupEntity(Loc.GetString("electromouse-startharvest", ("target", target)),
             target, PopupType.Large);
@@ -544,13 +561,13 @@ public sealed partial class ElectroMouseSystem : EntitySystem
         if (!TryComp<BatteryComponent>(target, out var targetBattery) || !TryComp<PowerNetworkBatteryComponent>(target, out var pnb))
             return false;
 
-        if (targetBattery.CurrentCharge <= targetBattery.MaxCharge / 100 * 20)
+        if (targetBattery.LastCharge <= targetBattery.MaxCharge / 100 * 20)
         {
             _popup.PopupEntity(Loc.GetString("battery-drainer-empty", ("battery", target)), uid, uid, PopupType.Medium);
             return false;
         }
 
-        var available = targetBattery.CurrentCharge;
+        var available = targetBattery.LastCharge;
         int required;
 
         if (HasComp<ApcComponent>(target))
@@ -562,7 +579,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
         else
             required = 5000;
 
-        _battery.UseCharge(target, required * 200, targetBattery);
+        _battery.TryUseCharge((target, targetBattery), required * 200);
 
         Dirty(target, targetBattery);
 
@@ -599,13 +616,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
             component.Harvested.Add(target);
             AddEnergy(uid, component, 5);
         }
-        else if (TryComp<HitscanBatteryAmmoProviderComponent>(target, out var hitprov))
-        {
-            AddEnergy(uid, component, hitprov.Shots);
-            hitprov.Shots = 0;
-            Dirty(target, hitprov);
-        }
-        else if (TryComp<ProjectileBatteryAmmoProviderComponent>(target, out var projprov))
+        else if (TryComp<BatteryAmmoProviderComponent>(target, out var projprov))
         {
             AddEnergy(uid, component, projprov.Shots);
             projprov.Shots = 0;
@@ -694,7 +705,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
                             { result, component.HealingStrength * -1 }
                         }
                     };
-                    _damageable.TryChangeDamage(uid, damage, false, true, damagecomp, origin: uid);
+                    _damageable.TryChangeDamage(uid, damage, false, true, origin: uid);
                     Dirty(uid, damagecomp);
                 }
                 else
@@ -715,7 +726,7 @@ public sealed partial class ElectroMouseSystem : EntitySystem
                             { result, component.HealingStrength * -1 }
                         }
                     };
-                    _damageable.TryChangeDamage(uid, damage, false, true, damagecomp, origin: uid);
+                    _damageable.TryChangeDamage(uid, damage, false, true, origin: uid);
                     Dirty(uid, damagecomp);
                 }
                 else

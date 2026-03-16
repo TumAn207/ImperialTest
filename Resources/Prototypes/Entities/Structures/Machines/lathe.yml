@@ -49,6 +49,11 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
+  - type: ApcPowerReceiver
+    powerLoad: 150
+  - type: PowerState
+    idlePowerDraw: 150
+    workingPowerDraw: 1000
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -107,11 +112,12 @@
   - type: Machine
     board: AutolatheMachineCircuitboard
   - type: MaterialStorage
-    whitelist:
+    whitelist: &StandardMaterialWhitelist
       tags:
         - Sheet
         - RawMaterial
         - Ingot
+  - type: OreSiloClient
   - type: Lathe
     idleState: icon
     runningState: building
@@ -122,6 +128,8 @@
     - PartsStatic
     - AtmosStatic
     - CablesStatic
+    - PaperworkStatic
+    - TowelsStatic
     - CargoStatic
     - MaterialsStatic
     - BasicChemistryStatic
@@ -133,6 +141,7 @@
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SecurityAmmoStatic
+    - SyndicateAmmoStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -179,20 +188,20 @@
   - type: Machine
     board: ProtolatheMachineCircuitboard
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
   - type: Lathe
     idleState: icon
     runningState: building
     unlitIdleState: unlit
     unlitRunningState: unlit-building
     staticPacks:
+    - MedicalImperialVehicleStatic # Imperial "ImperialVehicle"
     - ChemistryStatic
     - SurgeryStatic
     dynamicPacks:
+    - SalvagePlasmaCutterWeapons # Imperial "plasma Cutter + Advanced Version"
+    - SalvageAdvancedPlasmaCutterWeapons # Imperial "plasma Cutter + Advanced Version"
     - AdvancedTools
     - ScienceEquipment
     - ScienceExplosives
@@ -206,7 +215,6 @@
     - Janitor
     - Instruments
     - Equipment
-    - FauxTiles
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -254,7 +262,6 @@
     - CargoBoardsStatic
     - MedicalBoardsStatic
     - EngineeringBoardsStatic
-    - CircuitFloorsStatic
     - ImperialCircuitStatic # Imperial Space
     dynamicPacks:
     - EngineeringBoards
@@ -269,11 +276,8 @@
     emagDynamicPacks:
     - SecurityBoards
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
   - type: RequireProjectileTarget
 
 - type: entity
@@ -318,11 +322,8 @@
     - MechEquipment
     - QAIAndroidCorps # Imperial Space
   - type: MaterialStorage
-    whitelist:
-      tags:
-      - Sheet
-      - RawMaterial
-      - Ingot
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
   - type: GuideHelp
     guides:
     - Robotics
@@ -397,20 +398,22 @@
     - SecurityWeaponsStatic
     - ImperialSecurityStatic # Imperial Space
     dynamicPacks:
+    - SalvageSecurityBoards
+    - SalvageSecurityWeapons
     - SecurityEquipment
     - SecurityBoards
     - SecurityExplosives
     - SecurityAmmo
     - SecurityWeapons
     - ImperialSecurityDynamic # Imperial Space
+    - ImperialSecurityEquipment # Imperial Space Emergency Button
     - SecurityDisablers
     - QAIAndroidSecurityCorps # Imperial Space
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
+  - type: LatheAnnouncing
+    channels: [Security]
 
 - type: entity
   id: AmmoTechFab
@@ -438,12 +441,12 @@
       runningState: icon
       staticPacks:
       - SecurityAmmoStatic
+    - type: EmagLatheRecipes
+      emagStaticPacks:
+      - SyndicateAmmoStatic
     - type: MaterialStorage
-      whitelist:
-        tags:
-          - Sheet
-          - RawMaterial
-          - Ingot
+      whitelist: *StandardMaterialWhitelist
+    - type: OreSiloClient
 
 - type: entity
   id: MedicalTechFab
@@ -468,6 +471,7 @@
     idleState: icon
     runningState: icon
     staticPacks:
+    - MedicalImperialVehicleStatic # Imperial "ImperialVehicle"
     - TopicalsStatic
     - ChemistryStatic
     - MedicalStatic
@@ -477,10 +481,14 @@
     - SurgeryStatic
     dynamicPacks:
     - Chemistry
+    - ImperialCompactDefib # Imperial Space Compact Defibrillator
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
     stealGroup: MedicalTechFabCircuitboard
+  - type: OreSiloClient
+  - type: LatheAnnouncing
+    channels: [Medical]
 
 - type: entity
   parent: BaseLathe
@@ -503,6 +511,7 @@
     idleState: icon
     runningState: building
     staticPacks:
+    - TowelsStatic
     - ClothingCivilian
     - ClothingCargo
     - ClothingCommand
@@ -522,11 +531,8 @@
     - ClothingCentComm
     - ClothingSyndie
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - RawMaterial
-        - Ingot
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient
 
 - type: entity
   id: Biogenerator
@@ -570,6 +576,10 @@
     staticPacks:
     - BioGenIngredientsStatic
     - BioGenMaterialsStatic
+  - type: EmagLatheRecipes
+    emagStaticPacks:
+    - BioGenEmagStatic
+    - HostileCubesStatic
 
 - type: entity
   parent: BaseLathe
@@ -600,6 +610,7 @@
       idleState: icon
       runningState: building
       defaultProductionAmount: 10
+      priceModifier: 2 # Imperial Lathe Nerf
       staticPacks:
       - OreSmelting
       - RGlassSmelting
@@ -646,6 +657,7 @@
       tags:
       - Raw
       - Wooden
+      - Boll
   - type: Lathe
     idleState: base_machine
     runningState: base_machine_processing
@@ -678,12 +690,16 @@
     idleState: icon
     runningState: building
     staticPacks:
-    - FloorTilesStatic
+    - FloorDarkTilesStatic
+    - FloorSteelTilesStatic
+    - FloorWhiteTilesStatic
+    - FloorMaintsTilesStatic
+    - FloorWoodTilesStatic
+    - FloorConcreteTilesStatic
+    - CircuitFloorsStatic
+    - FloorMarbleTilesStatic
+    dynamicPacks:
+    - FauxTiles
   - type: MaterialStorage
-    whitelist:
-      tags:
-        - Sheet
-        - Metal
-        - Wooden
-        - RawMaterial
-        - Plastic
+    whitelist: *StandardMaterialWhitelist
+  - type: OreSiloClient

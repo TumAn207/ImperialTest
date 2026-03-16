@@ -1,0 +1,35 @@
+- type: listing
+  id: UplinkExplodingGaloshes
+  name: uplink-exploding-galoshes-name
+  description: uplink-exploding-galoshes-desc
+  icon: { sprite: /Textures/Clothing/Shoes/Specific/galoshes.rsi, state: icon }
+  productEntity: ClothingGaloshesExplosive
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkExplosives
+
+- type: listing
+  id: GrenadeFrag
+  name: ent-GrenadeFrag
+  description: ent-GrenadeFrag.desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: frag }
+  productEntity: GrenadeFrag
+  cost:
+    Telecrystal: 2
+  categories:
+    - UplinkAmmo
+
+- type: listing
+  id: GrenadeBlast
+  name: ent-GrenadeBlast
+  description: ent-GrenadeBlast.desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi, state: blast }
+  productEntity: GrenadeBlast
+  cost:
+    Telecrystal: 3
+  categories:
+    - UplinkAmmo
